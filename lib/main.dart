@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schultzim/app/utils/app_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
        
       ),
       home: const Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.primarycolor
       ),
     );
   }
