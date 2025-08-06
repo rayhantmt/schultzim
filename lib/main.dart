@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:schultzim/app/modules/splash/splash_view.dart';
+import 'package:schultzim/app/routes/app_pages.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 
 
 void main() {
@@ -12,13 +15,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-       
-      ),
-      home:SplashView()
+       initialRoute: AppRoutes.splash,
+      getPages: AppPages.pages,
+      
     );
   }
 }
