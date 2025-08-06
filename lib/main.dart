@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schultzim/app/modules/splash/splash_view.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 void main() {
@@ -17,9 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
        
       ),
-      home: const Scaffold(
-        backgroundColor: AppColors.primarycolor
-      ),
+      home:SplashView()
     );
   }
 }
