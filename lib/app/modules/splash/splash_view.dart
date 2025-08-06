@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:schultzim/app/utils/app_colors.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
