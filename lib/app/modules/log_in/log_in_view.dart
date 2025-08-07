@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:schultzim/app/common_widgets/common_button.dart';
 
 import 'package:schultzim/app/utils/app_images.dart';
 
@@ -10,15 +11,19 @@ class LogInView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffDBE8E1),
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-           Image.asset(AppImages.loginlogo,
-           height: 70,
-           width: 150,
-          // alignment: Alignment.center,
-           )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20 ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+             Image.asset(AppImages.loginlogo,
+             height: 70,
+             width: 150,
+            // alignment: Alignment.center,
+             ),
+             CommonButton(),
+            ],
+          ),
         ),
       )
     );
