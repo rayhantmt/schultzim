@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:schultzim/app/modules/splash/splash_view.dart';
 import 'package:schultzim/app/routes/app_pages.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 
