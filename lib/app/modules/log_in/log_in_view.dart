@@ -12,7 +12,7 @@ class LogInView extends StatelessWidget {
       backgroundColor: Color(0xffDBE8E1),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20 ),
+          padding: const EdgeInsets.only(left: 20 ,right: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -21,7 +21,7 @@ class LogInView extends StatelessWidget {
              width: 150,
             // alignment: Alignment.center,
              ),
-             CommonButton(),
+             CommonButton(tittle: 'Log In',),
             ],
           ),
         ),
