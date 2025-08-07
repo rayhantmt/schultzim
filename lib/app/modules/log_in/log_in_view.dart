@@ -10,20 +10,22 @@ class LogInView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffDBE8E1),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 20 ,right: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-             Image.asset(AppImages.loginlogo,
-             height: 70,
-             width: 150,
-            // alignment: Alignment.center,
-             ),
-             CommonButton(tittle: 'Log In',),
-            ],
-          ),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 20 ,right: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+           Image.asset(AppImages.loginlogo,
+           height: 70,
+           width: 150,
+          // alignment: Alignment.center,
+           ),
+           Container(
+            height: double.infinity,
+            width: double.infinity,
+            color: Colors.white,
+            child: CommonButton(tittle: 'Log In',)),
+          ],
         ),
       )
     );
