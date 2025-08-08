@@ -66,7 +66,20 @@ class LogInView extends StatelessWidget {
                 SizedBox(height: 5,),
                 Formfield(tittle: 'Rayhantmt@gmail.com', obsecuretext: false, keyboardtype: TextInputType.emailAddress),
                 SizedBox(height: 20,),
-                
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: Row(
+                    children: [
+                      Text('Email',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12,
+                        color: Color(0xff6C7278)
+                      ),
+                      )
+                    ],
+                  ),
+                ),
                 CommonButton(tittle: 'Log In',),
               ],
             )),
