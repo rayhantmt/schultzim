@@ -80,6 +80,8 @@ class LogInView extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 5,),
+                Formfield(tittle: 'Password', obsecuretext: false, keyboardtype: TextInputType.text),
                 CommonButton(tittle: 'Log In',),
               ],
             )),
