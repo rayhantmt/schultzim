@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 
 import 'package:schultzim/app/utils/app_images.dart';
@@ -15,16 +16,24 @@ class LogInView extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(height: Get.height*0.1,),
            Image.asset(AppImages.loginlogo,
            height: 70,
            width: 150,
           // alignment: Alignment.center,
            ),
            Container(
-            height: double.infinity,
+            height: Get.height*0.8,
             width: double.infinity,
-            color: Colors.white,
-            child: CommonButton(tittle: 'Log In',)),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+            ),
+            child: Column(
+              children: [
+                CommonButton(tittle: 'Log In',),
+              ],
+            )),
           ],
         ),
       )
