@@ -106,6 +106,21 @@ class LogInView extends StatelessWidget {
                         )),
                     ),
                   ),
+                  SizedBox(height: 20,),
+                  Row(
+                    children: [
+                      Checkbox(value: false, onChanged: (value) => {
+                        value=true
+                      },),
+                      Text('Remember me',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12,
+                        color: Color(0xff6C7278)
+                      ),
+                      )
+                    ],
+                  ),
                   CommonButton(tittle: 'Log In'),
                 ],
               ),
