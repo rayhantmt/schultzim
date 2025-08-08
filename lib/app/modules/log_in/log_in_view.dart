@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
+import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 
 import 'package:schultzim/app/utils/app_images.dart';
 
@@ -31,6 +32,7 @@ class LogInView extends StatelessWidget {
             ),
             child: Column(
               children: [
+                Formfield(tittle: 'tittle', obsecuretext: false, keyboardtype: TextInputType.emailAddress),
                 CommonButton(tittle: 'Log In',),
               ],
             )),
