@@ -118,6 +118,17 @@ class LogInView extends StatelessWidget {
                         fontSize: 12,
                         color: Color(0xff6C7278)
                       ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: Text('Forgot Password',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 12,
+                          color: Color(0xff126535)
+                        ),
+                        ),
                       )
                     ],
                   ),
