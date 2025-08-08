@@ -132,7 +132,29 @@ class LogInView extends StatelessWidget {
                       )
                     ],
                   ),
-                  CommonButton(tittle: 'Log In'),
+                  SizedBox(height: 20,),
+                  Text('or',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: Color(0xff6C7278)
+                  ),
+                  ),
+                  SizedBox(height: 30,),
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: Color(0xffEFF0F6)
+                      )
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: CommonButton(tittle: 'Log In'),
+                  ),
                 ],
               ),
             ),
