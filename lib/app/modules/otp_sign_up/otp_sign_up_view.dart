@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_controller.dart';
-import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_controller.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
 class OtpSignUpView extends StatelessWidget {
@@ -93,7 +93,9 @@ class OtpSignUpView extends StatelessWidget {
                   ),
                 )),
             const SizedBox(height: 32),
-            CommonButton(tittle: 'Verify')
+            GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.login),
+              child: CommonButton(tittle: 'Verify'))
           ],
         ),
       ),
