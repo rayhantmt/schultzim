@@ -5,6 +5,7 @@ import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 
 import 'package:schultzim/app/modules/log_in/log_in_controller.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 import 'package:schultzim/app/utils/app_images.dart';
@@ -196,12 +197,15 @@ class LogInView extends StatelessWidget {
                       ),
                       ),
                       SizedBox(width: 5,),
-                      Text('Sign Up',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        color: Color(0xff126535)
-                      ),
+                      GestureDetector(
+                        onTap: () => Get.toNamed(AppRoutes.signup),
+                        child: Text('Sign Up',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14,
+                          color: Color(0xff126535)
+                        ),
+                        ),
                       )
                     ],
                   )
