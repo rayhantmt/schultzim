@@ -101,83 +101,102 @@ class LogInView extends StatelessWidget {
                       keyboardtype: TextInputType.text,
                       icon: GestureDetector(
                         onTap: () => controrller.toggleObscureText(),
-                        child: Icon(controrller.isObscured.value
-                          ? Icons.visibility_outlined
-                            : Icons.visibility_off_outlined,
-                        )),
+                        child: Icon(
+                          controrller.isObscured.value
+                              ? Icons.visibility_outlined
+                              : Icons.visibility_off_outlined,
+                        ),
+                      ),
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 20),
                   Row(
                     children: [
-                      Obx(() => Checkbox(value: controrller.isChecked.value,
-                      activeColor: AppColors.primarycolor,
-                       onChanged: (value) => controrller.toggleCheckbox(value),),),
-                      Text('Remember me',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12,
-                        color: Color(0xff6C7278)
+                      Obx(
+                        () => Checkbox(
+                          value: controrller.isChecked.value,
+                          activeColor: AppColors.primarycolor,
+                          onChanged: (value) =>
+                              controrller.toggleCheckbox(value),
+                        ),
                       ),
+                      Text(
+                        'Remember me',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                          color: Color(0xff6C7278),
+                        ),
                       ),
                       Spacer(),
                       Padding(
                         padding: const EdgeInsets.only(right: 10),
-                        child: Text('Forgot Password',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 12,
-                          color: Color(0xff126535)
+                        child: Text(
+                          'Forgot Password',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12,
+                            color: Color(0xff126535),
+                          ),
                         ),
-                        ),
-                      )
+                      ),
                     ],
                   ),
-                  SizedBox(height: 10,),
-                    Padding(
-                    padding: const EdgeInsets.only(left: 20,right: 20),
+                  SizedBox(height: 10),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: CommonButton(tittle: 'Log In'),
                   ),
-                  SizedBox(height: 20,),
-                  Text('or',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 12,
-                    color: Color(0xff6C7278)
+                  SizedBox(height: 20),
+                  Text(
+                    'or',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      color: Color(0xff6C7278),
+                    ),
                   ),
-                  ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 20),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    padding: const EdgeInsets.only(left: 20, right: 20),
                     child: Container(
-                     
                       height: 50,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                         color: Colors.white,
-                        border: Border.all(
-                          width: 1,
-                          color: Color(0xffEFF0F6)
-                        ),
+                        color: Colors.white,
+                        border: Border.all(width: 1, color: Color(0xffEFF0F6)),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(AppImages.googlelogo),
-                          SizedBox(width: 5,),
-                          Text('Sign in with Google',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14,
-                            color: Color(0xff1A1C1E)
+                          SizedBox(width: 5),
+                          Text(
+                            'Sign in with Google',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                              color: Color(0xff1A1C1E),
+                            ),
                           ),
-                          )
                         ],
                       ),
                     ),
                   ),
-                
+                  SizedBox(height: 20,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Don't have an account?",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 12,
+                        color: Color(0xff6C7278)
+                      ),
+                      )
+                    ],
+                  )
                 ],
               ),
             ),
