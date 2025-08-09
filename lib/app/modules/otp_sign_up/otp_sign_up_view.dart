@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
+import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_controller.dart';
 import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_controller.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
-class OtpVerificationView extends StatelessWidget {
-   OtpVerificationView({super.key});
+class OtpSignUpView extends StatelessWidget {
+   OtpSignUpView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<OtpController>();
+    final controller = Get.find<OtpSignUpController>();
 
     return Scaffold(
       backgroundColor:Colors.white,

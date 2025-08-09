@@ -1,8 +1,10 @@
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:schultzim/app/modules/log_in/log_in_binding.dart';
 import 'package:schultzim/app/modules/log_in/log_in_view.dart';
-import 'package:schultzim/app/modules/otp_verification/otp_binding.dart';
-import 'package:schultzim/app/modules/otp_verification/otp_view.dart';
+import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_binding.dart';
+import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_view.dart';
+import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_binding.dart';
+import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_view.dart';
 import 'package:schultzim/app/modules/sign_up/sign_up_binding.dart';
 import 'package:schultzim/app/modules/sign_up/sign_up_view.dart';
 import 'package:schultzim/app/modules/splash/splash_view.dart';
@@ -13,6 +15,7 @@ class AppPages {
     GetPage(name: AppRoutes.login, page:() =>  LogInView(),binding: LoginBinding()),
     GetPage(name: AppRoutes.splash, page: () => SplashView(),),
     GetPage(name: AppRoutes.signup, page: () => SignUpView(),binding: SignUpBinding()),
-    GetPage(name: AppRoutes.otp, page: () => OtpVerificationView(),binding: OtpBinding())
+    GetPage(name: AppRoutes.otp, page: () => OtpVerificationView(),binding: OtpBinding()),
+    GetPage(name: AppRoutes.otpsignup, page: () => OtpSignUpView(),binding: OtpSignUpBinding())
   ];
 }

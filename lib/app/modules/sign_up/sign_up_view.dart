@@ -185,7 +185,7 @@ class SignUpView extends StatelessWidget {
               ),
               SizedBox(height: 20,),
               GestureDetector(
-                onTap: () => Get.toNamed(AppRoutes.login),
+                onTap: () => Get.toNamed(AppRoutes.otpsignup),
                 child: CommonButton(tittle: 'Sign up'))
                   ],
                 ),
