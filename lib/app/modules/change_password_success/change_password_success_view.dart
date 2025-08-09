@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 
 class ChangePasswordSuccessView extends StatelessWidget {
@@ -12,7 +13,7 @@ class ChangePasswordSuccessView extends StatelessWidget {
         padding: const EdgeInsets.only(left: 20,right: 20),
         child: Column(
           children: [
-            SizedBox(height: 100,),
+            SizedBox(height: Get.height*0.3,),
             Text('Forgot password',
             style: TextStyle(
               fontWeight: FontWeight.w700,
