@@ -134,7 +134,7 @@ class LogInView extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(right: 10),
                           child: GestureDetector(
-                            onTap: () => Get.toNamed(AppRoutes.otp),
+                            onTap: () => Get.toNamed(AppRoutes.forgotpassword),
                             child: Text(
                               'Forgot Password',
                               style: TextStyle(
