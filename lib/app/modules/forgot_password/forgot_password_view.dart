@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:schultzim/app/common_widgets/common_button.dart';
+import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 
 class ForgotPasswordView extends StatelessWidget {
   const ForgotPasswordView({super.key});
@@ -57,7 +61,12 @@ class ForgotPasswordView extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(10),
                 ),
-              )
+                child: Formfield(tittle: 'Enter your email', obsecuretext: false, keyboardtype: TextInputType.emailAddress),
+              ),
+              SizedBox(height: 30,),
+              GestureDetector(
+                onTap: () => Get.toNamed(AppRoutes.otp),
+                child: CommonButton(tittle: 'Verify'))
             ],
           ),
         ),
