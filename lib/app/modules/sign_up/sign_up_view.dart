@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/utils/app_images.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -9,15 +11,24 @@ class SignUpView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xffDBE8E1),
       body: Padding(padding: EdgeInsets.only(left: 20,right: 20),
-      child: Column(
-        children: [
-          Container(
-            height: Get.height*0.8,
-            decoration: BoxDecoration(
-              color: Colors.white
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: Get.height*0.1,),
+           Image.asset(
+                AppImages.loginlogo,
+                height: 70,
+                width: 150,
+                // alignment: Alignment.center,
+              ),
+            Container(
+              height: Get.height*0.8,
+              decoration: BoxDecoration(
+                color: Colors.white
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       ),
     );
