@@ -194,6 +194,14 @@ class LogInView extends StatelessWidget {
                         fontSize: 12,
                         color: Color(0xff6C7278)
                       ),
+                      ),
+                      SizedBox(width: 5,),
+                      Text('Sign Up',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        color: Color(0xff126535)
+                      ),
                       )
                     ],
                   )
