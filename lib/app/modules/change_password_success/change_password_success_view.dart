@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 
 class ChangePasswordSuccessView extends StatelessWidget {
   const ChangePasswordSuccessView({super.key});
@@ -30,7 +31,9 @@ class ChangePasswordSuccessView extends StatelessWidget {
             ),
             ),
             SizedBox(height: 30,),
-            CommonButton(tittle: 'Confirm')
+            GestureDetector(
+              onTap: () => Get.offAllNamed(AppRoutes.login),
+              child: CommonButton(tittle: 'Confirm'))
           ],
         ),
       ),
