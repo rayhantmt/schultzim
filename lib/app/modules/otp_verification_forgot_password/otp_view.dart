@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/modules/otp_verification/otp_controller.dart';
@@ -23,32 +22,29 @@ class OtpVerificationView extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(AppImages.otplogo),
+            Image.asset(AppImages.otplogo,
+            height: 77,
+            width: 81,
+            ),
             const Text(
-              "OTP Verification",
+              "Verify your email",
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 32,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF1B1E28),
+                color: Color(0xff050505),
               ),
             ),
             const SizedBox(height: 12),
-            const Text(
-              "Enter 6-digit Code",
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF1B1E28),
-              ),
-            ),
+           
             const SizedBox(height: 4),
              Text(
-              "Your code was sent to  ",
+              "Please enter the verification code we sent to your email address to complete the verification process.",
               style: TextStyle(
+                fontWeight: FontWeight.w400,
                 fontSize: 14,
-                color: Color(0xFF7D848D),
+                color: Color(0xff595959),
               ),
             ),
             const SizedBox(height: 24),
