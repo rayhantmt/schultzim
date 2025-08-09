@@ -150,43 +150,43 @@ class SignUpView extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 20,),
+                    SizedBox(height: 20),
                     Obx(
-                () => Formfield(
-                  tittle: 'Enter Password',
-                  obsecuretext: controller.isObscured.value,
-                  keyboardtype: TextInputType.text,
-                  icon: GestureDetector(
-                    onTap: controller.toggleObscureText,
-                    child: Icon(
-                      controller.isObscured.value
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
+                      () => Formfield(
+                        tittle: 'Enter Password',
+                        obsecuretext: controller.isObscured.value,
+                        keyboardtype: TextInputType.text,
+                        icon: GestureDetector(
+                          onTap: controller.toggleObscureText,
+                          child: Icon(
+                            controller.isObscured.value
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Obx(
-                () => Formfield(
-                  
-                  tittle: 'Confirmed Password',
-                  obsecuretext: controller.isObscured1.value,
-                  keyboardtype: TextInputType.text,
-                  icon: GestureDetector(
-                    onTap: controller.toggleObscureText1,
-                    child: Icon(
-                      controller.isObscured1.value
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined,
+                    SizedBox(height: 20),
+                    Obx(
+                      () => Formfield(
+                        tittle: 'Confirmed Password',
+                        obsecuretext: controller.isObscured1.value,
+                        keyboardtype: TextInputType.text,
+                        icon: GestureDetector(
+                          onTap: controller.toggleObscureText1,
+                          child: Icon(
+                            controller.isObscured1.value
+                                ? Icons.visibility_outlined
+                                : Icons.visibility_off_outlined,
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20,),
-              GestureDetector(
-                onTap: () => Get.toNamed(AppRoutes.otpsignup),
-                child: CommonButton(tittle: 'Sign up'))
+                    SizedBox(height: 20),
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppRoutes.otpsignup),
+                      child: CommonButton(tittle: 'Sign up'),
+                    ),
                   ],
                 ),
               ),
