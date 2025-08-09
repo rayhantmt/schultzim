@@ -5,4 +5,5 @@ abstract class AppRoutes {
 static const otp='/otp';
 static const otpsignup='/otpsignup';
 static const forgotpassword='/forgotpassword';
+static const changepasswotd='/changepassword';
 }
