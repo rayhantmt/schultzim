@@ -1,6 +1,7 @@
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:schultzim/app/modules/change_password/change_password_binding.dart';
 import 'package:schultzim/app/modules/change_password/change_password_view.dart';
+import 'package:schultzim/app/modules/change_password_success/change_password_success_view.dart';
 import 'package:schultzim/app/modules/forgot_password/forgot_password_view.dart';
 import 'package:schultzim/app/modules/log_in/log_in_binding.dart';
 import 'package:schultzim/app/modules/log_in/log_in_view.dart';
@@ -21,6 +22,7 @@ class AppPages {
     GetPage(name: AppRoutes.otp, page: () => OtpVerificationView(),binding: OtpBinding()),
     GetPage(name: AppRoutes.otpsignup, page: () => OtpSignUpView(),binding: OtpSignUpBinding()),
     GetPage(name: AppRoutes.forgotpassword, page: () => ForgotPasswordView(),),
-    GetPage(name: AppRoutes.changepasswotd, page: () => ChangePasswordView(),binding: ChangePasswordBinding())
+    GetPage(name: AppRoutes.changepasswotd, page: () => ChangePasswordView(),binding: ChangePasswordBinding()),
+    GetPage(name: AppRoutes.changepasswordsuccess, page: () => ChangePasswordSuccessView(),)
   ];
 }

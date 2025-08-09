@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 import 'package:schultzim/app/modules/change_password/change_password_controller.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 
 class ChangePasswordView extends StatelessWidget {
   const ChangePasswordView({super.key});
@@ -97,7 +98,9 @@ class ChangePasswordView extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 30,),
-                    CommonButton(tittle: 'Update Password')
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppRoutes.changepasswordsuccess),
+                      child: CommonButton(tittle: 'Update Password'))
             ],
           ),
         ),
