@@ -12,6 +12,7 @@ RxBool isObscured = false.obs;
     isObscured1.value = !isObscured1.value;
   }
 
+final countryCode = '+880'.obs; // Default country code
 
 
 }

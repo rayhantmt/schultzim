@@ -1,7 +1,9 @@
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
+import 'package:schultzim/app/modules/sign_up/sign_up_controller.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
@@ -10,6 +12,7 @@ class SignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller=Get.find<SignUpController>();
     return Scaffold(
       backgroundColor: Color(0xffDBE8E1),
       body: Padding(padding: EdgeInsets.only(left: 20,right: 20),
@@ -106,6 +109,43 @@ class SignUpView extends StatelessWidget {
                       keyboardtype: TextInputType.emailAddress,
                     ),
                     SizedBox(height: 20),
+                     Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Phone number',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 12,
+                              color: Color(0xff6C7278),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                     Row(
+                children: [
+                   Obx(() => CountryCodePicker(
+              onChanged: (code) => controller.countryCode.value = code.dialCode ?? '+880',
+              initialSelection: controller.countryCode.value,
+              favorite: ['+880', 'BD'],
+              showCountryOnly: false,
+              showOnlyCountryWhenClosed: false,
+              alignLeft: false,
+            )),
+           
+
+                  Expanded(
+                    child: Formfield(
+                      
+                      tittle: 'Enter you phone number',
+                      obsecuretext: false,
+                      keyboardtype: TextInputType.number,
+                    ),
+                  ),
+                ],
+              ),
                 ],
               ),
             ),
