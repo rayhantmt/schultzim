@@ -133,6 +133,11 @@ class LogInView extends StatelessWidget {
                       )
                     ],
                   ),
+                  SizedBox(height: 10,),
+                    Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: CommonButton(tittle: 'Log In'),
+                  ),
                   SizedBox(height: 20,),
                   Text('or',
                   style: TextStyle(
@@ -141,7 +146,7 @@ class LogInView extends StatelessWidget {
                     color: Color(0xff6C7278)
                   ),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.only(left: 20,right: 20),
                     child: Container(
@@ -172,10 +177,7 @@ class LogInView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20,right: 20),
-                    child: CommonButton(tittle: 'Log In'),
-                  ),
+                
                 ],
               ),
             ),
