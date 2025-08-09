@@ -85,7 +85,7 @@ class LogInView extends StatelessWidget {
                       child: Row(
                         children: [
                           Text(
-                            'Email',
+                            'Password',
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12,
