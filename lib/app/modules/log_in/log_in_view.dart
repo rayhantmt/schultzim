@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
@@ -109,9 +110,9 @@ class LogInView extends StatelessWidget {
                   SizedBox(height: 20,),
                   Row(
                     children: [
-                      Checkbox(value: false, onChanged: (value) => {
-                        value=true
-                      },),
+                      Obx(() => Checkbox(value: controrller.isChecked.value,
+                      activeColor: AppColors.primarycolor,
+                       onChanged: (value) => controrller.toggleCheckbox(value),),),
                       Text('Remember me',
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
@@ -141,14 +142,34 @@ class LogInView extends StatelessWidget {
                   ),
                   ),
                   SizedBox(height: 30,),
-                  Container(
-                    height: 50,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 1,
-                        color: Color(0xffEFF0F6)
-                      )
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: Container(
+                     
+                      height: 50,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                         color: Colors.white,
+                        border: Border.all(
+                          width: 1,
+                          color: Color(0xffEFF0F6)
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SvgPicture.asset(AppImages.googlelogo),
+                          SizedBox(width: 5,),
+                          Text('Sign in with Google',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            color: Color(0xff1A1C1E)
+                          ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Padding(
