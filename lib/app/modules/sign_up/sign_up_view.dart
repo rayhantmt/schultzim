@@ -67,7 +67,7 @@ class SignUpView extends StatelessWidget {
                     child: Row(
                       children: [
                         Text(
-                          'Email',
+                          'Name',
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
@@ -79,11 +79,33 @@ class SignUpView extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Formfield(
-                    tittle: 'Rayhantmt@gmail.com',
+                    tittle: 'Rayhan',
                     obsecuretext: false,
                     keyboardtype: TextInputType.emailAddress,
                   ),
                   SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Email',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 12,
+                              color: Color(0xff6C7278),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Formfield(
+                      tittle: 'Rayhantmt@gmail.com',
+                      obsecuretext: false,
+                      keyboardtype: TextInputType.emailAddress,
+                    ),
+                    SizedBox(height: 20),
                 ],
               ),
             ),
