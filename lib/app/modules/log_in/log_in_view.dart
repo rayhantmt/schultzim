@@ -151,7 +151,7 @@ class LogInView extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
                       child: GestureDetector(
-                        onTap: () => Get.toNamed(AppRoutes.mainscreen),
+                        onTap: () => Get.offAllNamed(AppRoutes.mainscreen),
                         child: CommonButton(tittle: 'Log In')),
                     ),
                     SizedBox(height: 20),
