@@ -7,4 +7,5 @@ static const otpsignup='/otpsignup';
 static const forgotpassword='/forgotpassword';
 static const changepasswotd='/changepassword';
 static const changepasswordsuccess='/changepasswordsuccess';
+static const mainscreen='/mainscreen';
 }
