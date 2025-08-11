@@ -14,63 +14,58 @@ class ProfileView extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: Get.height*0.25,
+            height: Get.height * 0.25,
             child: Row(
-              
               children: [
-                SizedBox(width: 5,),
-                Image.asset(AppImages.profile,
-                height: 50,
-                width: 50,
-                ),
-                SizedBox(width: 5,),
+                SizedBox(width: 5),
+                Image.asset(AppImages.profile, height: 50, width: 50),
+                SizedBox(width: 5),
 
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Rayhan',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: Colors.white
+                    Text(
+                      'Rayhan',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
                     ),
 
-                    
+                    Text(
+                      'Rayhantmt@gmail.com',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
                     ),
-
-                    Text('Rayhantmt@gmail.com',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: Colors.white
-                    ),
-                    )
                   ],
                 ),
                 Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: GestureDetector(
-
-                  onTap: () => Get.toNamed(AppRoutes.editprofile),
-                    child: Icon(Icons.edit_square,
-                    color: Colors.white,
-                    ),
+                    onTap: () => Get.toNamed(AppRoutes.editprofile),
+                    child: Icon(Icons.edit_square, color: Colors.white),
                   ),
-                )
+                ),
               ],
             ),
           ),
-          Expanded(child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+              ),
             ),
-          ))
+          ),
         ],
       ),
     );
