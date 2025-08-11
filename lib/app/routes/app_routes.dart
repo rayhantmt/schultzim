@@ -8,4 +8,5 @@ static const forgotpassword='/forgotpassword';
 static const changepasswotd='/changepassword';
 static const changepasswordsuccess='/changepasswordsuccess';
 static const mainscreen='/mainscreen';
+static const editprofile='/editprofile';
 }
