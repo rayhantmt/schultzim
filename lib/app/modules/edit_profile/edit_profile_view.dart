@@ -30,6 +30,7 @@ class EditProfileView extends StatelessWidget {
             ),
           ),
           Expanded(child: Container(
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -37,6 +38,7 @@ class EditProfileView extends StatelessWidget {
                   topRight: Radius.circular(20),
                 ),
             ),
+            child: Text('Edit profile'),
           ))
         ],
       ),
