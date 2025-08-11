@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
+import 'package:schultzim/app/utils/app_images.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});
@@ -14,7 +16,12 @@ class ProfileView extends StatelessWidget {
           Container(
             height: Get.height*0.25,
             child: Row(
-              children: [],
+              children: [
+                SvgPicture.asset(AppImages.profile,
+                height: 50,
+                width: 50,
+                )
+              ],
             ),
           ),
           Expanded(child: Container(
