@@ -5,6 +5,6 @@ static const splashlogo ='lib/assets/splash_logo.png';
 //static const loginlogo='lib/assets/svgs/loginlogo.svg';
 static const loginlogo ='lib/assets/log_in_logo.png';
 static const googlelogo='lib/assets/svgs/google_log.svg';
-//static const otplogo='lib/assets/svgs/otplogo.svg';
+static const profile='lib/assets/svgs/profile.svg';
 static const otplogo ='lib/assets/otplogo.png';
 }
