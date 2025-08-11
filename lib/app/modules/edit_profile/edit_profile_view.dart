@@ -14,7 +14,19 @@ class EditProfileView extends StatelessWidget {
           Container(
             height: Get.height*0.25,
             child: Row(
-              children: [],
+              children: [
+                Icon(Icons.arrow_back_ios,
+                color: Colors.white,
+                ),
+                SizedBox(width: Get.width*0.35,),
+                Text('Edit Profile',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Colors.white
+                ),
+                )
+              ],
             ),
           ),
           Expanded(child: Container(
