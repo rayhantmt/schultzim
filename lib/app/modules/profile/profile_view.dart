@@ -17,7 +17,7 @@ class ProfileView extends StatelessWidget {
             height: Get.height*0.25,
             child: Row(
               children: [
-                SvgPicture.asset(AppImages.profile,
+                Image.asset(AppImages.profile,
                 height: 50,
                 width: 50,
                 )
