@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
@@ -50,8 +51,12 @@ class ProfileView extends StatelessWidget {
                 Spacer(),
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
-                  child: Icon(Icons.edit_square,
-                  color: Colors.white,
+                  child: GestureDetector(
+
+                  onTap: () => Get.toNamed(AppRoutes.editprofile),
+                    child: Icon(Icons.edit_square,
+                    color: Colors.white,
+                    ),
                   ),
                 )
               ],
