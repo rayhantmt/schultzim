@@ -66,40 +66,87 @@ class ProfileView extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(left: 20,right: 20),
+                padding: const EdgeInsets.only(left: 20, right: 20),
                 child: Column(
                   children: [
-                    ProfileContainer(tiitle: 'Personal Information', ic: Icon(Icons.person,color: AppColors.primarycolor,)),
-                    ProfileContainer(tiitle: 'Password Change', ic: Icon(Icons.lock,
-                    color: AppColors.primarycolor,
-                    )),
-                    ProfileContainer(tiitle: "Notification", ic: Icon(Icons.notifications,
-                    color: AppColors.primarycolor,
-                    )),
-                    ProfileContainer(tiitle: 'Help & Support', ic: Icon(Icons.info_outlined,
-                    color: AppColors.primarycolor,
-                    )),
-                    ProfileContainer(tiitle: 'Legal & Compliance', ic: Icon(Icons.insert_drive_file_rounded,
-                    color: AppColors.primarycolor,
-                    )),
-                    ProfileContainer(tiitle: 'Payment Mathoad', ic: Icon(Icons.payment,
-                    color: AppColors.primarycolor,
-                    )),
-                    Row(
-                      children: [
-                        Icon(Icons.power_settings_new,
-                        color: Color(0xffDF0505),
-                        ),
-                        SizedBox(width: 5,),
-                        Text('Log out',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
-                          color: Color(0xffDF0505)
-                        ),
-                        )
-                      ],
-                    )
+                    ProfileContainer(
+                      tiitle: 'Personal Information',
+                      ic: Icon(Icons.person, color: AppColors.primarycolor),
+                    ),
+                    ProfileContainer(
+                      tiitle: 'Password Change',
+                      ic: Icon(Icons.lock, color: AppColors.primarycolor),
+                    ),
+                    ProfileContainer(
+                      tiitle: "Notification",
+                      ic: Icon(
+                        Icons.notifications,
+                        color: AppColors.primarycolor,
+                      ),
+                    ),
+                    ProfileContainer(
+                      tiitle: 'Help & Support',
+                      ic: Icon(
+                        Icons.info_outlined,
+                        color: AppColors.primarycolor,
+                      ),
+                    ),
+                    ProfileContainer(
+                      tiitle: 'Legal & Compliance',
+                      ic: Icon(
+                        Icons.insert_drive_file_rounded,
+                        color: AppColors.primarycolor,
+                      ),
+                    ),
+                    ProfileContainer(
+                      tiitle: 'Payment Mathoad',
+                      ic: Icon(Icons.payment, color: AppColors.primarycolor),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Dialog(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                              child: Container(
+                                height: Get.height*0.4,
+                                child: Column(
+                                  children: [
+                                    CircleAvatar(
+                                      backgroundColor: Color(0xffDC143C),
+                                      child: Icon(Icons.logout_outlined,
+                                      color: Colors.white
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            );
+                          },
+                        );
+                      },
+
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.power_settings_new,
+                            color: Color(0xffDF0505),
+                          ),
+                          SizedBox(width: 5),
+                          Text(
+                            'Log out',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Color(0xffDF0505),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
