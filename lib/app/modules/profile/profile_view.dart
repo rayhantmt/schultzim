@@ -126,40 +126,46 @@ class ProfileView extends StatelessWidget {
                                         ),
                                       ),
                                       Text('Are you sure you want to log out of your account?'),
-                                      Container(
-                                        
-                                        height: 50,
-                                        width: double.infinity,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(99),
-                                          color: Color(0xffDC143C),
-                                        ),
-                                        child: Center(
-                                          child: Text('Confirm Log Out',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                            color: Colors.white
+                                      GestureDetector(
+                                        onTap: () => Get.offAllNamed(AppRoutes.login),
+                                        child: Container(
+                                          
+                                          height: 50,
+                                          width: double.infinity,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(99),
+                                            color: Color(0xffDC143C),
                                           ),
+                                          child: Center(
+                                            child: Text('Confirm Log Out',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 14,
+                                              color: Colors.white
+                                            ),
+                                            ),
                                           ),
                                         ),
                                       ),
                                   
-                                      Container(
-                                        
-                                        height: 50,
-                                        width: double.infinity,
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(99),
-                                          color: Color(0xffF3F4F6),
-                                        ),
-                                        child: Center(
-                                          child: Text('Cancel',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 14,
-                                            color: Color(0xff727272)
+                                      GestureDetector(
+                                        onTap: () => Navigator.pop(context),
+                                        child: Container(
+                                          
+                                          height: 50,
+                                          width: double.infinity,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(99),
+                                            color: Color(0xffF3F4F6),
                                           ),
+                                          child: Center(
+                                            child: Text('Cancel',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 14,
+                                              color: Color(0xff727272)
+                                            ),
+                                            ),
                                           ),
                                         ),
                                       )
