@@ -72,6 +72,9 @@ class ProfileView extends StatelessWidget {
                     ProfileContainer(tiitle: 'Personal Information', ic: Icon(Icons.person,color: AppColors.primarycolor,)),
                     ProfileContainer(tiitle: 'Password Change', ic: Icon(Icons.lock,
                     color: AppColors.primarycolor,
+                    )),
+                    ProfileContainer(tiitle: "Notification", ic: Icon(Icons.notifications,
+                    color: AppColors.primarycolor,
                     ))
                   ],
                 ),
