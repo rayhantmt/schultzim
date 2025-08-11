@@ -65,13 +65,16 @@ class ProfileView extends StatelessWidget {
                   topRight: Radius.circular(20),
                 ),
               ),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20,right: 20),
-                    child: ProfileContainer(tiitle: 'Personal Information', ic: Icon(Icons.person,color: AppColors.primarycolor,)),
-                  )
-                ],
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20,right: 20),
+                child: Column(
+                  children: [
+                    ProfileContainer(tiitle: 'Personal Information', ic: Icon(Icons.person,color: AppColors.primarycolor,)),
+                    ProfileContainer(tiitle: 'Password Change', ic: Icon(Icons.lock,
+                    color: AppColors.primarycolor,
+                    ))
+                  ],
+                ),
               ),
             ),
           ),

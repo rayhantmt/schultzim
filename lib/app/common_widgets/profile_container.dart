@@ -9,7 +9,7 @@ final Icon ic;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height*0.2,
+      height: Get.height*0.07,
       width: double.infinity,
       child: Row(
         children: [
