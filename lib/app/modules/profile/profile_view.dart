@@ -75,7 +75,31 @@ class ProfileView extends StatelessWidget {
                     )),
                     ProfileContainer(tiitle: "Notification", ic: Icon(Icons.notifications,
                     color: AppColors.primarycolor,
-                    ))
+                    )),
+                    ProfileContainer(tiitle: 'Help & Support', ic: Icon(Icons.info_outlined,
+                    color: AppColors.primarycolor,
+                    )),
+                    ProfileContainer(tiitle: 'Legal & Compliance', ic: Icon(Icons.insert_drive_file_rounded,
+                    color: AppColors.primarycolor,
+                    )),
+                    ProfileContainer(tiitle: 'Payment Mathoad', ic: Icon(Icons.payment,
+                    color: AppColors.primarycolor,
+                    )),
+                    Row(
+                      children: [
+                        Icon(Icons.power_settings_new,
+                        color: Color(0xffDF0505),
+                        ),
+                        SizedBox(width: 5,),
+                        Text('Log out',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Color(0xffDF0505)
+                        ),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
