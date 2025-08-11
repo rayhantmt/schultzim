@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/common_widgets/profile_container.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 import 'package:schultzim/app/utils/app_images.dart';
@@ -63,6 +64,11 @@ class ProfileView extends StatelessWidget {
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+              ),
+              child: Column(
+                children: [
+                  ProfileContainer(tiitle: 'notifications', ic: Icon(Icons.face_2_outlined))
+                ],
               ),
             ),
           ),
