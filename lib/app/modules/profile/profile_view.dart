@@ -48,8 +48,11 @@ class ProfileView extends StatelessWidget {
                   ],
                 ),
                 Spacer(),
-                Icon(Icons.edit_square,
-                color: Colors.white,
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Icon(Icons.edit_square,
+                  color: Colors.white,
+                  ),
                 )
               ],
             ),
