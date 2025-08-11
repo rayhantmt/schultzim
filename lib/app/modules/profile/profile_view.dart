@@ -67,7 +67,10 @@ class ProfileView extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  ProfileContainer(tiitle: 'notifications', ic: Icon(Icons.face_2_outlined))
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: ProfileContainer(tiitle: 'Personal Information', ic: Icon(Icons.person,color: AppColors.primarycolor,)),
+                  )
                 ],
               ),
             ),

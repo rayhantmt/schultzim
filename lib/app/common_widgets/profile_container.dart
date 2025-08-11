@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
+
 
 class ProfileContainer extends StatelessWidget {
   const ProfileContainer({super.key, required this.tiitle, required this.ic});
@@ -14,8 +14,14 @@ final Icon ic;
       child: Row(
         children: [
 ic,
-SizedBox(width: Get.width*0.3,),
-Text(tiitle),
+SizedBox(width: Get.width*0.02,),
+Text(tiitle,
+style: TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 16,
+  color: Color(0xff050505)
+),
+),
 Spacer(),
 Icon(Icons.arrow_forward_ios)
         ],
