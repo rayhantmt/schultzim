@@ -164,7 +164,7 @@ class HomeView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        HomeContainer(tittle: 'Deposit',ic: Icons.abc,),
+                        HomeContainer(tittle: 'Deposit',ic: Icons.arrow_downward,),
                         HomeContainer(tittle: 'Withdraw',ic: Icons.payment,)
                       ],
                     ),
@@ -172,8 +172,8 @@ class HomeView extends StatelessWidget {
                       Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                      //  HomeContainer(),
-                       // HomeContainer()
+                        HomeContainer(tittle: 'IRS Payment',ic: Icons.pie_chart_outline_sharp,),
+                       HomeContainer(tittle: 'Tax',ic: Icons.insert_drive_file_outlined,)
                       ],
                     )
                   ],
