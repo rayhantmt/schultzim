@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/modules/deposit/deposit_controller.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 class DepositView extends StatelessWidget {
@@ -7,6 +8,7 @@ class DepositView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller =Get.find<DepositController>();
     return Scaffold(
       backgroundColor: AppColors.primarycolor,
       body: Column(
@@ -38,6 +40,8 @@ class DepositView extends StatelessWidget {
             ),
           ),
           Expanded(child: Container(
+            height: double.infinity,
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
@@ -47,7 +51,63 @@ class DepositView extends StatelessWidget {
             ),
             child: Column(
               children: [
-                
+                Obx(() {
+              return Row(
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () => controller.setDepositType(0),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          color: controller.depositType.value == 0
+                              ? Colors.green
+                              : Colors.grey[200],
+                          borderRadius:
+                              BorderRadius.horizontal(left: Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "On-Time",
+                            style: TextStyle(
+                              color: controller.depositType.value == 0
+                                  ? Colors.white
+                                  : Colors.green,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () => controller.setDepositType(1),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          color: controller.depositType.value == 1
+                              ? Colors.green
+                              : Colors.grey[200],
+                          borderRadius:
+                              BorderRadius.horizontal(right: Radius.circular(20)),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Recurring Deposit",
+                            style: TextStyle(
+                              color: controller.depositType.value == 1
+                                  ? Colors.white
+                                  : Colors.green,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            }),
+
               ],
             ),
           ))
