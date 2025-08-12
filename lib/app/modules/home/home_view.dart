@@ -176,7 +176,9 @@ class HomeView extends StatelessWidget {
                       Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        HomeContainer(tittle: 'IRS Payment',ic: Icons.pie_chart_outline_sharp,),
+                        GestureDetector(
+                          onTap: () => Get.toNamed(AppRoutes.irspayment),
+                          child: HomeContainer(tittle: 'IRS Payment',ic: Icons.pie_chart_outline_sharp,)),
                        HomeContainer(tittle: 'Tax',ic: Icons.insert_drive_file_outlined,)
                       ],
                     ),
