@@ -76,11 +76,50 @@ class HomeView extends StatelessWidget {
                         children: [
                           Column(
                             children: [
-                              Text('Total Balance')
+                              Text('Total Balance',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                                color: Color(0xff737373)
+                              ),
+                              ),
+                              Text('\$ 56786',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 29,
+                                color: Color(0xff050505)
+                              ),
+                              )
                             ],
+                          ),
+                          Spacer(),
+                          Icon(Icons.arrow_forward,
+                          size: 30,
                           )
                         ],
                       ),
+                    
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 100,
+                          width: Get.width*0.4,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Color(0xffEDF1F3)
+                          ),
+                        ),
+                        Spacer(),
+                           Container(
+                          height: 100,
+                          width: Get.width*0.4,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Color(0xffEDF1F3)
+                          ),
+                        )
+                      ],
                     )
                   ],
                 ),
