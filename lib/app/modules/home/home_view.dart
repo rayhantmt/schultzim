@@ -118,6 +118,13 @@ class HomeView extends StatelessWidget {
                                 fontSize: 16,
                                 color: Color(0xff737373)
                               ),
+                              ),
+                              Text("\$33.50",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                                color: Color(0xff050505)
+                              ),
                               )
                             ],
                           ),
@@ -129,6 +136,25 @@ class HomeView extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(12),
                             color: Color(0xffEDF1F3)
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Expected IRS',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                                color: Color(0xff737373)
+                              ),
+                              ),
+                              Text("\$7500.50",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 18,
+                                color: Color(0xff050505)
+                              ),
+                              )
+                            ],
                           ),
                         )
                       ],
