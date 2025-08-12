@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/common_widgets/home_container.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 import 'package:schultzim/app/utils/app_images.dart';
@@ -157,6 +158,22 @@ class HomeView extends StatelessWidget {
                             ],
                           ),
                         )
+                      ],
+                    ),
+                    SizedBox(height: 20,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        HomeContainer(),
+                        HomeContainer()
+                      ],
+                    ),
+                    SizedBox(height: 20,),
+                      Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        HomeContainer(),
+                        HomeContainer()
                       ],
                     )
                   ],
