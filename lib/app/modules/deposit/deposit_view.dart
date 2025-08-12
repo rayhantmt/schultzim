@@ -250,7 +250,38 @@ style: TextStyle(
 ),
 ),
 SizedBox(height: 10,),
-Formfield(tittle: '23/7/2025', obsecuretext: false, keyboardtype: TextInputType.number,icon: Icon(Icons.calendar_month),)
+Formfield(tittle: '23/7/2025', obsecuretext: false, keyboardtype: TextInputType.number,icon: Icon(Icons.calendar_month),),
+SizedBox(height: 20,),
+Container(
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color(0xffEDF1F3),
+            border: Border.all(width: 1, color: Color(0xffBFBFBF)),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            children: [
+              Checkbox(
+                value: c.isChecked.value,
+                onChanged: c.toggleCheckbox,
+                checkColor: AppColors.primarycolor,
+                activeColor: Color(0xffEDF1F3),
+              ),
+              Text(
+                'Stripe',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Spacer(),
+        CommonButton(tittle: 'Confirm Deposit'),
+        SizedBox(height: 20),
       ],
     ),
   );
