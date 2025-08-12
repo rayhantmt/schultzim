@@ -175,6 +175,19 @@ class HomeView extends StatelessWidget {
                         HomeContainer(tittle: 'IRS Payment',ic: Icons.pie_chart_outline_sharp,),
                        HomeContainer(tittle: 'Tax',ic: Icons.insert_drive_file_outlined,)
                       ],
+                    ),
+                    SizedBox(height: 20,),
+                    Row(
+                      children: [
+                        Text('Upcoming Transactions',
+                  
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                          color: Color(0xff050505)
+                        ),
+                        ),
+                      ],
                     )
                   ],
                 ),
