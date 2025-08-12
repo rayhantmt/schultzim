@@ -164,16 +164,16 @@ class HomeView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        HomeContainer(),
-                        HomeContainer()
+                        HomeContainer(tittle: 'Deposit',ic: Icons.abc,),
+                        HomeContainer(tittle: 'Withdraw',ic: Icons.payment,)
                       ],
                     ),
                     SizedBox(height: 20,),
                       Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        HomeContainer(),
-                        HomeContainer()
+                      //  HomeContainer(),
+                       // HomeContainer()
                       ],
                     )
                   ],
