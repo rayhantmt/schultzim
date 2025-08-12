@@ -109,6 +109,18 @@ class HomeView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(12),
                             color: Color(0xffEDF1F3)
                           ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Earned this year',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                                color: Color(0xff737373)
+                              ),
+                              )
+                            ],
+                          ),
                         ),
                         Spacer(),
                            Container(
