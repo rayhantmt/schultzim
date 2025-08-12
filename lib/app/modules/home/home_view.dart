@@ -56,12 +56,35 @@ class HomeView extends StatelessWidget {
             ),
           ),
           Expanded(child: Container(
+            height: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+            ),
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20,right: 20),
+                child: Column(
+                  children: [
+                    SizedBox(height: 20,),
+                    Container(
+                      height: Get.height*0.1,
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text('Total Balance')
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
           ))
         ],
