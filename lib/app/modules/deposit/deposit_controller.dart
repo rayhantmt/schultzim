@@ -6,4 +6,8 @@ class DepositController extends GetxController {
   void setDepositType(int type) {
     depositType.value = type;
   }
+   var isChecked = false.obs;
+
+  void toggleCheckbox(bool? value) {
+    isChecked.value = value ?? false;}
 }
