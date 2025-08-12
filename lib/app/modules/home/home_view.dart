@@ -48,7 +48,7 @@ class HomeView extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: GestureDetector(
-                    onTap: () => Get.toNamed(AppRoutes.editprofile),
+                    onTap: () => Get.toNamed(AppRoutes.notifications),
                     child: Icon(Icons.notifications,size: 40, color: Colors.white),
                   ),
                 ),

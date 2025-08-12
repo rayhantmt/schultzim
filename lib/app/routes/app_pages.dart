@@ -8,6 +8,7 @@ import 'package:schultzim/app/modules/log_in/log_in_binding.dart';
 import 'package:schultzim/app/modules/log_in/log_in_view.dart';
 import 'package:schultzim/app/modules/main_screen/main_screen.dart';
 import 'package:schultzim/app/modules/main_screen/main_screen_binding.dart';
+import 'package:schultzim/app/modules/notification/notification_view.dart';
 import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_binding.dart';
 import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_view.dart';
 import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_binding.dart';
@@ -28,6 +29,7 @@ class AppPages {
     GetPage(name: AppRoutes.changepasswotd, page: () => ChangePasswordView(),binding: ChangePasswordBinding()),
     GetPage(name: AppRoutes.changepasswordsuccess, page: () => ChangePasswordSuccessView(),),
     GetPage(name: AppRoutes.mainscreen, page: () => MainScreenView(),binding: MainScreenBinding()),
-    GetPage(name: AppRoutes.editprofile, page: () => EditProfileView(),)
+    GetPage(name: AppRoutes.editprofile, page: () => EditProfileView(),),
+    GetPage(name: AppRoutes.notifications, page: () => NotificationView(),)
   ];
 }
