@@ -10,4 +10,8 @@ static const changepasswordsuccess='/changepasswordsuccess';
 static const mainscreen='/mainscreen';
 static const editprofile='/editprofile';
 static const notifications='/notifications';
+static const deposit='/deposit';
+static const withdraw='/withdraw';
+static const irspayment='/irspayment';
+static const tax='/tax';
 }

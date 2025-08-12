@@ -2,8 +2,10 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:schultzim/app/modules/change_password/change_password_binding.dart';
 import 'package:schultzim/app/modules/change_password/change_password_view.dart';
 import 'package:schultzim/app/modules/change_password_success/change_password_success_view.dart';
+import 'package:schultzim/app/modules/deposit/deposit_view.dart';
 import 'package:schultzim/app/modules/edit_profile/edit_profile_view.dart';
 import 'package:schultzim/app/modules/forgot_password/forgot_password_view.dart';
+import 'package:schultzim/app/modules/irs_payment/irs_payment_view.dart';
 import 'package:schultzim/app/modules/log_in/log_in_binding.dart';
 import 'package:schultzim/app/modules/log_in/log_in_view.dart';
 import 'package:schultzim/app/modules/main_screen/main_screen.dart';
@@ -16,6 +18,8 @@ import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_view.
 import 'package:schultzim/app/modules/sign_up/sign_up_binding.dart';
 import 'package:schultzim/app/modules/sign_up/sign_up_view.dart';
 import 'package:schultzim/app/modules/splash/splash_view.dart';
+import 'package:schultzim/app/modules/tax/tex_view.dart';
+import 'package:schultzim/app/modules/withdraw/withdraw_view.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 
 class AppPages {
@@ -30,6 +34,10 @@ class AppPages {
     GetPage(name: AppRoutes.changepasswordsuccess, page: () => ChangePasswordSuccessView(),),
     GetPage(name: AppRoutes.mainscreen, page: () => MainScreenView(),binding: MainScreenBinding()),
     GetPage(name: AppRoutes.editprofile, page: () => EditProfileView(),),
-    GetPage(name: AppRoutes.notifications, page: () => NotificationView(),)
+    GetPage(name: AppRoutes.notifications, page: () => NotificationView(),),
+    GetPage(name: AppRoutes.deposit, page: () => DepositView()),
+    GetPage(name: AppRoutes.withdraw, page: () => WithdrawView(),),
+    GetPage(name: AppRoutes.irspayment, page: () => IrsPaymentView(),),
+    GetPage(name: AppRoutes.tax, page: () => TexView(),)
   ];
 }
