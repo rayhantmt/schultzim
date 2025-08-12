@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
+import 'package:schultzim/app/utils/app_images.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -14,7 +16,43 @@ class HomeView extends StatelessWidget {
           Container(
             height: Get.height*0.25,
             child: Row(
-              children: [],
+              children: [
+                SizedBox(width: 5),
+                Image.asset(AppImages.profile, height: 50, width: 50),
+                SizedBox(width: 5),
+
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Hello Rayhan',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+
+                    Text(
+                  "Let's Start Exploring",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: GestureDetector(
+                    onTap: () => Get.toNamed(AppRoutes.editprofile),
+                    child: Icon(Icons.notifications,size: 40, color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           ),
           Expanded(child: Container(
