@@ -164,7 +164,9 @@ class HomeView extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        HomeContainer(tittle: 'Deposit',ic: Icons.arrow_downward,),
+                        GestureDetector(
+                          onTap: () => Get.toNamed(AppRoutes.deposit),
+                          child: HomeContainer(tittle: 'Deposit',ic: Icons.arrow_downward,)),
                         HomeContainer(tittle: 'Withdraw',ic: Icons.payment,)
                       ],
                     ),
