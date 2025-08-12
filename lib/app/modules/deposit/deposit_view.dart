@@ -200,5 +200,27 @@ Widget _onTimeDepositForm() {
 }
 
 Widget _recurringDepositForm() {
-  return Column(children: [Text('requiring payment')]);
+  return Padding(
+    padding: const EdgeInsets.only(left: 20, right: 20),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 20),
+        Text(
+          'Amount',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            color: Color(0xff050505),
+          ),
+        ),
+        SizedBox(height: 10),
+        Formfield(
+          tittle: '\$ 458',
+          obsecuretext: false,
+          keyboardtype: TextInputType.number,
+        ),
+      ],
+    ),
+  );
 }

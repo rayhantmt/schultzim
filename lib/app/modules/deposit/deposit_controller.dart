@@ -10,4 +10,11 @@ class DepositController extends GetxController {
 
   void toggleCheckbox(bool? value) {
     isChecked.value = value ?? false;}
+    final List<String> options = ["Monthly", "Weekly", "Quarterly"];
+
+  var selectedIndex = 0.obs; // default Monthly
+
+  void setFrequency(int index) {
+    selectedIndex.value = index;
+  }
 }
