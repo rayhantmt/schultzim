@@ -167,7 +167,9 @@ class HomeView extends StatelessWidget {
                         GestureDetector(
                           onTap: () => Get.toNamed(AppRoutes.deposit),
                           child: HomeContainer(tittle: 'Deposit',ic: Icons.arrow_downward,)),
-                        HomeContainer(tittle: 'Withdraw',ic: Icons.payment,)
+                        GestureDetector(
+                          onTap: () => Get.toNamed(AppRoutes.withdraw),
+                          child: HomeContainer(tittle: 'Withdraw',ic: Icons.payment,))
                       ],
                     ),
                     SizedBox(height: 20,),
