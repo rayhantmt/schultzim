@@ -113,15 +113,15 @@ class DepositView extends StatelessWidget {
                       );
                     }),
                   ),
- Expanded(
-              child: Obx(() {
-                if (controller.depositType.value == 0) {
-                  return _onTimeDepositForm();
-                } else {
-                  return _recurringDepositForm();
-                }
-              }),)
-
+                  Expanded(
+                    child: Obx(() {
+                      if (controller.depositType.value == 0) {
+                        return _onTimeDepositForm();
+                      } else {
+                        return _recurringDepositForm();
+                      }
+                    }),
+                  ),
                 ],
               ),
             ),
@@ -131,68 +131,74 @@ class DepositView extends StatelessWidget {
     );
   }
 }
-Widget _onTimeDepositForm(){
-  final con=Get.find<DepositController>();
+
+Widget _onTimeDepositForm() {
+  final con = Get.find<DepositController>();
   return Padding(
-    padding: const EdgeInsets.only(left: 20,right: 20),
+    padding: const EdgeInsets.only(left: 20, right: 20),
     child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20,),
-        Text('Amount',
-        style: TextStyle(
-          fontWeight: FontWeight.w500,
-          fontSize: 18,
-          color: Color(0xff050505)
-        ),
-        ),
-        SizedBox(height: 10,),
-      Formfield(tittle: '\$ 55.00', obsecuretext: false, keyboardtype: TextInputType.number),
-      SizedBox(height: 20,),
-      Text('Payment Method',
-      style: TextStyle(
-        fontWeight: FontWeight.w500,
-        fontSize: 18,
-        color: Color(0xff050505)
-      ),
-      ),
-      SizedBox(height: 10,),
-      Container(
-        height: 50,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Color(0xffEDF1F3),
-          border: Border.all(
-            width: 1,
-            color: Color(0xffBFBFBF)
+        SizedBox(height: 20),
+        Text(
+          'Amount',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            color: Color(0xff050505),
           ),
-          borderRadius: BorderRadius.circular(8)
         ),
-        child: Row(
-          children: [
-            Checkbox(value:con.isChecked.value , onChanged: con.toggleCheckbox,checkColor: AppColors.primarycolor,activeColor: Color(0xffEDF1F3),),
-            Text('Stripe',
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 18,
-              color: Color(0xff050505)
-            ),
-            )
-          ],
+        SizedBox(height: 10),
+        Formfield(
+          tittle: '\$ 55.00',
+          obsecuretext: false,
+          keyboardtype: TextInputType.number,
         ),
-      ),
-      Spacer(),
-      CommonButton(tittle: 'Confirm Deposit'),
-      SizedBox(height: 20,)
+        SizedBox(height: 20),
+        Text(
+          'Payment Method',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            color: Color(0xff050505),
+          ),
+        ),
+        SizedBox(height: 10),
+        Container(
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color(0xffEDF1F3),
+            border: Border.all(width: 1, color: Color(0xffBFBFBF)),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            children: [
+              Checkbox(
+                value: con.isChecked.value,
+                onChanged: con.toggleCheckbox,
+                checkColor: AppColors.primarycolor,
+                activeColor: Color(0xffEDF1F3),
+              ),
+              Text(
+                'Stripe',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Spacer(),
+        CommonButton(tittle: 'Confirm Deposit'),
+        SizedBox(height: 20),
       ],
     ),
   );
 }
 
-Widget _recurringDepositForm(){
-  return Column(
-    children: [
-      Text('requiring payment')
-    ],
-  );
+Widget _recurringDepositForm() {
+  return Column(children: [Text('requiring payment')]);
 }
