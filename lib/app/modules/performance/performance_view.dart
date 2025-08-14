@@ -78,11 +78,31 @@ class PerformanceView extends StatelessWidget {
                     Container(
                           height: 50,
                           decoration: BoxDecoration(
+                            color: Color(0xffEDF1F3),
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
                               width: 1,
                               color: Color(0xffBFBFBF)
                             )
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text('2023',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 17,
+                                color: Color(0xff050505)
+                              ),
+                              ),
+                              Text('\$ 45',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                                    color: Color(0xff050505)
+                              ),
+                              )
+                            ],
                           ),
                         )
                   ],
