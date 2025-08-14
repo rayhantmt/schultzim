@@ -57,16 +57,42 @@ class IrsPaymentView extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(height: 20),
-                  Container(
-                    height: 120,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        width: 1,
-                         color: Color(0xffEDF1F3)
-                      )
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: Container(
+                      height: 120,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Color(0xffEDF1F3),
+                        border: Border.all(
+                          width: 1,
+                           color: Color(0xffEDF1F3)
+                        ),
+                        borderRadius: BorderRadius.circular(8)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text('Total IRS Payment',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Color(0xff050505)
+                          ),
+                          ),
+                          Text('\$345',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 20,
+                            color: Color(0xff050505)
+                          ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
+                  SizedBox(height: 20,),
                   SingleChildScrollView(
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20, right: 20),
