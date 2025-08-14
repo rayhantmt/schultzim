@@ -60,7 +60,31 @@ class PerformanceView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                         color: Color(0xffEDF1F3)
                       ),
-                    )
+                    ),
+                    SizedBox(height: 20,),
+                    Row(
+                      children: [
+                        Text('Year-End Value',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                          color: Color(0xff050505)
+                        ),
+                        ),
+                        
+                      ],
+                    ),
+                    SizedBox(height: 10,),
+                    Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              width: 1,
+                              color: Color(0xffBFBFBF)
+                            )
+                          ),
+                        )
                   ],
                 ),
               ),
