@@ -14,7 +14,16 @@ class DepositSuccessful extends StatelessWidget {
           Container(
             height: Get.height*0.25,
             child: Row(
-              children: [],
+              children: [
+                Icon(Icons.arrow_back),
+                Text('Deposit Successful',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+                )
+              ],
             ),
           ),
           Expanded(child: Container(
