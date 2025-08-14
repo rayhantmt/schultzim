@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
-import 'package:schultzim/app/modules/deposit/deposit_controller.dart';
 import 'package:schultzim/app/modules/irs_payment/irs_payment_controller.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
@@ -58,62 +57,74 @@ class IrsPaymentView extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Obx(() {
-                      return Row(
-                        children: [
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () => controller.setDepositType(0),
-                              child: Container(
-                                padding: EdgeInsets.symmetric(vertical: 12),
-                                decoration: BoxDecoration(
-                                  color: controller.depositType.value == 0
-                                      ? AppColors.primarycolor
-                                      : Color(0xffE7F0EB),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "On-Time",
-                                    style: TextStyle(
-                                      color: controller.depositType.value == 0
-                                          ? Colors.white
-                                          : Color(0xff126535),
+                  Container(
+                    height: 120,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                         color: Color(0xffEDF1F3)
+                      )
+                    ),
+                  ),
+                  SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 20, right: 20),
+                      child: Obx(() {
+                        return Row(
+                          children: [
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () => controller.setDepositType(0),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                  decoration: BoxDecoration(
+                                    color: controller.depositType.value == 0
+                                        ? AppColors.primarycolor
+                                        : Color(0xffE7F0EB),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      "On-Time",
+                                      style: TextStyle(
+                                        color: controller.depositType.value == 0
+                                            ? Colors.white
+                                            : Color(0xff126535),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () => controller.setDepositType(1),
-                              child: Container(
-                                padding: EdgeInsets.symmetric(vertical: 12),
-                                decoration: BoxDecoration(
-                                  color: controller.depositType.value == 1
-                                      ? AppColors.primarycolor
-                                      : Color(0xffE7F0EB),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "Recurring Deposit",
-                                    style: TextStyle(
-                                      color: controller.depositType.value == 1
-                                          ? Colors.white
-                                          : Color(0xff126535),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () => controller.setDepositType(1),
+                                child: Container(
+                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                  decoration: BoxDecoration(
+                                    color: controller.depositType.value == 1
+                                        ? AppColors.primarycolor
+                                        : Color(0xffE7F0EB),
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      "Recurring Deposit",
+                                      style: TextStyle(
+                                        color: controller.depositType.value == 1
+                                            ? Colors.white
+                                            : Color(0xff126535),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
-                      );
-                    }),
+                          ],
+                        );
+                      }),
+                    ),
                   ),
                   Expanded(
                     child: Obx(() {
