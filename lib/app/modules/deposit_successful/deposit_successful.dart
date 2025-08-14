@@ -1,6 +1,11 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
+import 'package:schultzim/app/utils/app_images.dart';
 
 class DepositSuccessful extends StatelessWidget {
   const DepositSuccessful({super.key});
@@ -31,12 +36,18 @@ class DepositSuccessful extends StatelessWidget {
             ),
           ),
           Expanded(child: Container(
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+            ),
+            child: Column(
+              children: [
+                SvgPicture.asset(AppImages.dpscful)
+              ],
             ),
           ))
         ],
