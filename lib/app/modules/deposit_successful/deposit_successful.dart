@@ -1,9 +1,10 @@
-import 'dart:convert';
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:schultzim/app/routes/app_routes.dart';
+import 'package:schultzim/app/common_widgets/common_button.dart';
+
 import 'package:schultzim/app/utils/app_colors.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
@@ -46,7 +47,21 @@ class DepositSuccessful extends StatelessWidget {
             ),
             child: Column(
               children: [
-                SvgPicture.asset(AppImages.dpscful)
+                SizedBox(height: Get.height*0.15,),
+                SvgPicture.asset(AppImages.dpscful),
+                SizedBox(height: Get.height*0.05,),
+                Text('Deposit successful!',
+                style: TextStyle(fontWeight: FontWeight.w600,
+                fontSize: 16,
+                color: AppColors.primarycolor
+                ),
+                ),
+                Spacer(),
+                CommonButton(tittle: 'Confirm',
+                
+                ),
+SizedBox(height: 40,)
+
               ],
             ),
           ))
