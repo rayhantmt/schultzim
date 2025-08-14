@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 import 'package:schultzim/app/modules/deposit/deposit_controller.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 class DepositView extends StatelessWidget {
@@ -192,7 +193,9 @@ Widget _onTimeDepositForm() {
           ),
         ),
         Spacer(),
-        CommonButton(tittle: 'Confirm Deposit'),
+        GestureDetector(
+          onTap: () => Get.toNamed(AppRoutes.depositsuccessful),
+          child: CommonButton(tittle: 'Confirm Deposit')),
         SizedBox(height: 20),
       ],
     ),
@@ -280,7 +283,9 @@ Container(
           ),
         ),
         Spacer(),
-        CommonButton(tittle: 'Confirm Deposit'),
+        GestureDetector(
+          onTap: () => Get.toNamed(AppRoutes.depositsuccessful),
+          child: CommonButton(tittle: 'Confirm Deposit')),
         SizedBox(height: 20),
       ],
     ),
