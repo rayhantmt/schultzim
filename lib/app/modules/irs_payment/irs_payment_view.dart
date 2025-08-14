@@ -93,64 +93,62 @@ class IrsPaymentView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20,),
-                  SingleChildScrollView(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 20, right: 20),
-                      child: Obx(() {
-                        return Row(
-                          children: [
-                            Expanded(
-                              child: GestureDetector(
-                                onTap: () => controller.setDepositType(0),
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(vertical: 12),
-                                  decoration: BoxDecoration(
-                                    color: controller.depositType.value == 0
-                                        ? AppColors.primarycolor
-                                        : Color(0xffE7F0EB),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      "On-Time",
-                                      style: TextStyle(
-                                        color: controller.depositType.value == 0
-                                            ? Colors.white
-                                            : Color(0xff126535),
-                                      ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20, right: 20),
+                    child: Obx(() {
+                      return Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => controller.setDepositType(0),
+                              child: Container(
+                                padding: EdgeInsets.symmetric(vertical: 12),
+                                decoration: BoxDecoration(
+                                  color: controller.depositType.value == 0
+                                      ? AppColors.primarycolor
+                                      : Color(0xffE7F0EB),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "On-Time",
+                                    style: TextStyle(
+                                      color: controller.depositType.value == 0
+                                          ? Colors.white
+                                          : Color(0xff126535),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                            Expanded(
-                              child: GestureDetector(
-                                onTap: () => controller.setDepositType(1),
-                                child: Container(
-                                  padding: EdgeInsets.symmetric(vertical: 12),
-                                  decoration: BoxDecoration(
-                                    color: controller.depositType.value == 1
-                                        ? AppColors.primarycolor
-                                        : Color(0xffE7F0EB),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      "Recurring Deposit",
-                                      style: TextStyle(
-                                        color: controller.depositType.value == 1
-                                            ? Colors.white
-                                            : Color(0xff126535),
-                                      ),
+                          ),
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => controller.setDepositType(1),
+                              child: Container(
+                                padding: EdgeInsets.symmetric(vertical: 12),
+                                decoration: BoxDecoration(
+                                  color: controller.depositType.value == 1
+                                      ? AppColors.primarycolor
+                                      : Color(0xffE7F0EB),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "Recurring Deposit",
+                                    style: TextStyle(
+                                      color: controller.depositType.value == 1
+                                          ? Colors.white
+                                          : Color(0xff126535),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ],
-                        );
-                      }),
-                    ),
+                          ),
+                        ],
+                      );
+                    }),
                   ),
                   Expanded(
                     child: Obx(() {
@@ -180,7 +178,7 @@ Widget _onTimeDepositForm() {
       children: [
         SizedBox(height: 20),
         Text(
-          'Amount',
+          'IRS amount',
           style: TextStyle(
             fontWeight: FontWeight.w500,
             fontSize: 18,
@@ -194,6 +192,59 @@ Widget _onTimeDepositForm() {
           keyboardtype: TextInputType.number,
         ),
         SizedBox(height: 20),
+  
+  Text('Name',
+  style: TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+  color: Color(0xff050505)
+  ),
+  ),
+  SizedBox( height: 20,),
+  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text),
+   SizedBox(height: 20),
+  
+  Text('Name',
+  style: TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+  color: Color(0xff050505)
+  ),
+  ),
+  SizedBox( height: 20,),
+  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text), SizedBox(height: 20),
+  
+  Text('Name',
+  style: TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+  color: Color(0xff050505)
+  ),
+  ),
+  SizedBox( height: 20,),
+  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text), SizedBox(height: 20),
+  
+  Text('Name',
+  style: TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+  color: Color(0xff050505)
+  ),
+  ),
+  SizedBox( height: 20,),
+  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text), SizedBox(height: 20),
+  
+  Text('Name',
+  style: TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 18,
+  color: Color(0xff050505)
+  ),
+  ),
+  SizedBox( height: 20,),
+  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text),
+  
+  
         Text(
           'Payment Method',
           style: TextStyle(
