@@ -21,6 +21,7 @@ import 'package:schultzim/app/modules/sign_up/sign_up_binding.dart';
 import 'package:schultzim/app/modules/sign_up/sign_up_view.dart';
 import 'package:schultzim/app/modules/splash/splash_view.dart';
 import 'package:schultzim/app/modules/tax/tex_view.dart';
+import 'package:schultzim/app/modules/withdraw/withdraw_binding.dart';
 import 'package:schultzim/app/modules/withdraw/withdraw_view.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 
@@ -38,7 +39,7 @@ class AppPages {
     GetPage(name: AppRoutes.editprofile, page: () => EditProfileView(),),
     GetPage(name: AppRoutes.notifications, page: () => NotificationView(),),
     GetPage(name: AppRoutes.deposit, page: () => DepositView(),binding: DepositBinding()),
-    GetPage(name: AppRoutes.withdraw, page: () => WithdrawView(),),
+    GetPage(name: AppRoutes.withdraw, page: () => WithdrawView(),binding: WithdrawBinding()),
     GetPage(name: AppRoutes.irspayment, page: () => IrsPaymentView(),),
     GetPage(name: AppRoutes.tax, page: () => TexView(),),
     GetPage(name: AppRoutes.depositsuccessful, page: () => DepositSuccessful(),)
