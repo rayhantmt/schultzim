@@ -171,212 +171,215 @@ class IrsPaymentView extends StatelessWidget {
 
 Widget _onTimeDepositForm() {
   final con = Get.find<IrsPaymentController>();
-  return Padding(
-    padding: const EdgeInsets.only(left: 20, right: 20),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: 20),
-        Text(
-          'IRS amount',
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 18,
-            color: Color(0xff050505),
-          ),
-        ),
-        SizedBox(height: 10),
-        Formfield(
-          tittle: '\$ 55.00',
-          obsecuretext: false,
-          keyboardtype: TextInputType.number,
-        ),
-        SizedBox(height: 20),
-  
-  Text('Name',
-  style: TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 18,
-  color: Color(0xff050505)
-  ),
-  ),
-  SizedBox( height: 20,),
-  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text),
-   SizedBox(height: 20),
-  
-  Text('Name',
-  style: TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 18,
-  color: Color(0xff050505)
-  ),
-  ),
-  SizedBox( height: 20,),
-  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text), SizedBox(height: 20),
-  
-  Text('Name',
-  style: TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 18,
-  color: Color(0xff050505)
-  ),
-  ),
-  SizedBox( height: 20,),
-  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text), SizedBox(height: 20),
-  
-  Text('Name',
-  style: TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 18,
-  color: Color(0xff050505)
-  ),
-  ),
-  SizedBox( height: 20,),
-  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text), SizedBox(height: 20),
-  
-  Text('Name',
-  style: TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 18,
-  color: Color(0xff050505)
-  ),
-  ),
-  SizedBox( height: 20,),
-  Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text),
-  
-  
-        Text(
-          'Payment Method',
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 18,
-            color: Color(0xff050505),
-          ),
-        ),
-        SizedBox(height: 10),
-        Container(
-          height: 50,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Color(0xffEDF1F3),
-            border: Border.all(width: 1, color: Color(0xffBFBFBF)),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Row(
-            children: [
-              Checkbox(
-                value: con.isChecked.value,
-                onChanged: con.toggleCheckbox,
-                checkColor: AppColors.primarycolor,
-                activeColor: Color(0xffEDF1F3),
+  return Expanded(
+    child: SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 20),
+            Text(
+              'IRS amount',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505),
               ),
-              Text(
-                'Stripe',
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 18,
-                  color: Color(0xff050505),
-                ),
+            ),
+            SizedBox(height: 10),
+            Formfield(
+              tittle: '\$ 55.00',
+              obsecuretext: false,
+              keyboardtype: TextInputType.number,
+            ),
+            SizedBox(height: 20),
+            Text('Name',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505)
               ),
-            ],
-          ),
+            ),
+            SizedBox( height: 20,),
+            Formfield(tittle: 'Name', obsecuretext: false, keyboardtype: TextInputType.text),
+            SizedBox(height: 20),
+            Text('Phone',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505)
+              ),
+            ),
+            SizedBox( height: 20,),
+            Formfield(tittle: 'Enter number', obsecuretext: false, keyboardtype: TextInputType.text), 
+            SizedBox(height: 20),
+            Text('Ein Number',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505)
+              ),
+            ),
+            SizedBox( height: 20,),
+            Formfield(tittle: 'Enter', obsecuretext: false, keyboardtype: TextInputType.text), 
+            SizedBox(height: 20),
+            Text('Address(city, state-zip)',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505)
+              ),
+            ),
+            SizedBox( height: 20,),
+            Formfield(tittle: 'Enter', obsecuretext: false, keyboardtype: TextInputType.text),
+             SizedBox(height: 20),
+            Text('Tax Year',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505)
+              ),
+            ),
+            SizedBox( height: 20,),
+            Formfield(tittle: 'Enter', obsecuretext: false, keyboardtype: TextInputType.text),
+            Text(
+              'Payment Method',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505),
+              ),
+            ),
+            SizedBox(height: 10),
+            Container(
+              height: 50,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Color(0xffEDF1F3),
+                border: Border.all(width: 1, color: Color(0xffBFBFBF)),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  Checkbox(
+                    value: con.isChecked.value,
+                    onChanged: con.toggleCheckbox,
+                    checkColor: AppColors.primarycolor,
+                    activeColor: Color(0xffEDF1F3),
+                  ),
+                  Text(
+                    'Stripe',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.depositsuccessful),
+              child: CommonButton(tittle: 'Confirm Deposit')),
+            SizedBox(height: 20),
+          ],
         ),
-        Spacer(),
-        GestureDetector(
-          onTap: () => Get.toNamed(AppRoutes.depositsuccessful),
-          child: CommonButton(tittle: 'Confirm Deposit')),
-        SizedBox(height: 20),
-      ],
+      ),
     ),
   );
 }
 
 Widget _recurringDepositForm() {
   final c=Get.find<IrsPaymentController>();
-  return Padding(
-    padding: const EdgeInsets.only(left: 20, right: 20),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SizedBox(height: 20),
-        Text(
-          'Amount',
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 18,
-            color: Color(0xff050505),
-          ),
-        ),
-        SizedBox(height: 10),
-        Formfield(
-          tittle: '\$ 458',
-          obsecuretext: false,
-          keyboardtype: TextInputType.number,
-        ),
-        SizedBox(height: 20,),
-        Row(
-  children: List.generate(c.options.length, (index) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Radio<int>(
-          activeColor: AppColors.primarycolor,
-          value: index,
-          groupValue: c.selectedIndex.value,
-          onChanged: (value) {
-            c.setFrequency(value!);
-          },
-        ),
-        Text(c.options[index]),
-      //  const SizedBox(width: 10),
-      ],
-    );
-  }),
-),
-SizedBox(height: 20,),
-Text('Expire Date',
-style: TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 18,
-  color: Color(0xff050505)
-),
-),
-SizedBox(height: 10,),
-Formfield(tittle: '23/7/2025', obsecuretext: false, keyboardtype: TextInputType.number,icon: Icon(Icons.calendar_month),),
-SizedBox(height: 20,),
-Container(
-          height: 50,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Color(0xffEDF1F3),
-            border: Border.all(width: 1, color: Color(0xffBFBFBF)),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Row(
-            children: [
-              Checkbox(
-                value: c.isChecked.value,
-                onChanged: c.toggleCheckbox,
-                checkColor: AppColors.primarycolor,
-                activeColor: Color(0xffEDF1F3),
+  return Expanded(
+    child: SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 20),
+            Text(
+              'Amount',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505),
               ),
-              Text(
-                'Stripe',
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 18,
-                  color: Color(0xff050505),
-                ),
+            ),
+            SizedBox(height: 10),
+            Formfield(
+              tittle: '\$ 458',
+              obsecuretext: false,
+              keyboardtype: TextInputType.number,
+            ),
+            SizedBox(height: 20,),
+            Row(
+              children: List.generate(c.options.length, (index) {
+                return Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Radio<int>(
+                      activeColor: AppColors.primarycolor,
+                      value: index,
+                      groupValue: c.selectedIndex.value,
+                      onChanged: (value) {
+                        c.setFrequency(value!);
+                      },
+                    ),
+                    Text(c.options[index]),
+                  ],
+                );
+              }),
+            ),
+            SizedBox(height: 20,),
+            Text('Expire Date',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 18,
+                color: Color(0xff050505)
               ),
-            ],
-          ),
+            ),
+            SizedBox(height: 10,),
+            Formfield(tittle: '23/7/2025', obsecuretext: false, keyboardtype: TextInputType.number,icon: Icon(Icons.calendar_month),),
+            SizedBox(height: 20,),
+            Container(
+              height: 50,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Color(0xffEDF1F3),
+                border: Border.all(width: 1, color: Color(0xffBFBFBF)),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  Checkbox(
+                    value: c.isChecked.value,
+                    onChanged: c.toggleCheckbox,
+                    checkColor: AppColors.primarycolor,
+                    activeColor: Color(0xffEDF1F3),
+                  ),
+                  Text(
+                    'Stripe',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18,
+                      color: Color(0xff050505),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
+            GestureDetector(
+              onTap: () => Get.toNamed(AppRoutes.depositsuccessful),
+              child: CommonButton(tittle: 'Confirm Deposit')),
+            SizedBox(height: 20),
+          ],
         ),
-        Spacer(),
-        GestureDetector(
-          onTap: () => Get.toNamed(AppRoutes.depositsuccessful),
-          child: CommonButton(tittle: 'Confirm Deposit')),
-        SizedBox(height: 20),
-      ],
+      ),
     ),
   );
 }
