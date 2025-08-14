@@ -21,9 +21,12 @@ class DepositSuccessful extends StatelessWidget {
             height: Get.height*0.25,
             child: Row(
               children: [
-                Icon(Icons.arrow_back_ios_new_outlined,
-                size: 35,
-                color: Colors.white,
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Icon(Icons.arrow_back_ios_new_outlined,
+                  size: 35,
+                  color: Colors.white,
+                  ),
                 ),
                 SizedBox(width: Get.width*0.25,),
                 Text('Deposit Successful',
