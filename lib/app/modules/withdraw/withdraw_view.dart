@@ -91,6 +91,18 @@ class WithdrawView extends StatelessWidget {
                             fontSize: 14,
                             color: Color(0xff050505)
                           ),
+                          ),
+                          SizedBox(height: 20,),
+                          Row(
+                            children: [
+                              Text('Withdraw To',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                                color: Color(0xff050505)
+                              ),
+                              ),
+                            ],
                           )
                     ],
                   ),
