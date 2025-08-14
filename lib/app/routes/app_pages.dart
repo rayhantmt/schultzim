@@ -23,6 +23,7 @@ import 'package:schultzim/app/modules/splash/splash_view.dart';
 import 'package:schultzim/app/modules/tax/tex_view.dart';
 import 'package:schultzim/app/modules/withdraw/withdraw_binding.dart';
 import 'package:schultzim/app/modules/withdraw/withdraw_view.dart';
+import 'package:schultzim/app/modules/withdraw_successful/withdraw_successful.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 
 class AppPages {
@@ -42,6 +43,7 @@ class AppPages {
     GetPage(name: AppRoutes.withdraw, page: () => WithdrawView(),binding: WithdrawBinding()),
     GetPage(name: AppRoutes.irspayment, page: () => IrsPaymentView(),),
     GetPage(name: AppRoutes.tax, page: () => TexView(),),
-    GetPage(name: AppRoutes.depositsuccessful, page: () => DepositSuccessful(),)
+    GetPage(name: AppRoutes.depositsuccessful, page: () => DepositSuccessful(),),
+    GetPage(name: AppRoutes.withdrawsuccessful, page: () => WithdrawSuccessful(),)
   ];
 }

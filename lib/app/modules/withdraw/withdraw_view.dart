@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 import 'package:schultzim/app/modules/withdraw/withdraw_controller.dart';
+import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 class WithdrawView extends StatelessWidget {
@@ -148,7 +149,9 @@ class WithdrawView extends StatelessWidget {
                         ),
                       ),
                      SizedBox(height: 40,),
-                      CommonButton(tittle: 'Withdraw'),
+                      GestureDetector(
+                        onTap: () => Get.toNamed(AppRoutes.withdrawsuccessful),
+                        child: CommonButton(tittle: 'Withdraw')),
                       SizedBox(height: 20,)
                     ],
                   ),
