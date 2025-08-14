@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
+import 'package:schultzim/app/modules/withdraw/withdraw_controller.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 class WithdrawView extends StatelessWidget {
@@ -8,6 +9,7 @@ class WithdrawView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller=Get.find<WithdrawController>();
     return Scaffold(
       backgroundColor: AppColors.primarycolor,
       body: Column(
@@ -103,7 +105,35 @@ class WithdrawView extends StatelessWidget {
                               ),
                               ),
                             ],
-                          )
+                          ),
+                          SizedBox(height: 20,),
+                          Obx(() =>     Container(
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color(0xffEDF1F3),
+            border: Border.all(width: 1, color: Color(0xffBFBFBF)),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            children: [
+              Checkbox(
+                value: controller.isChecked.value,
+                onChanged: controller.toggleCheckbox,
+                checkColor: AppColors.primarycolor,
+                activeColor: Color(0xffEDF1F3),
+              ),
+              Text(
+                'Stripe',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505),
+                ),
+              ),
+            ],
+          ),
+        ),)
                     ],
                   ),
                 ),
