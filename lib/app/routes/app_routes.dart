@@ -14,4 +14,5 @@ static const deposit='/deposit';
 static const withdraw='/withdraw';
 static const irspayment='/irspayment';
 static const tax='/tax';
+static const depositsuccessful='/depositsuccessful';
 }
