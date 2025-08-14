@@ -84,6 +84,14 @@ class WithdrawView extends StatelessWidget {
                             obsecuretext: false,
                             keyboardtype: TextInputType.number,
                           ),
+                          SizedBox(height: 10),
+                          Text('Fee Preview: \$0.00',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14,
+                            color: Color(0xff050505)
+                          ),
+                          )
                     ],
                   ),
                 ),
