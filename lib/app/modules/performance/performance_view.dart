@@ -14,7 +14,20 @@ class PerformanceView extends StatelessWidget {
           Container(
             height: Get.height*0.25,
             child: Row(
-              children: [],
+              children: [
+                Icon(Icons.pie_chart,
+                size: 65,
+                color: Colors.white,
+                ),
+                SizedBox(width: 20,),
+                Text('Performance',
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+                )
+              ],
             ),
           ),
           Expanded(child: Container(
