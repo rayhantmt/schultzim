@@ -104,6 +104,50 @@ class PerformanceView extends StatelessWidget {
                               )
                             ],
                           ),
+                        ),
+                        SizedBox(height: 20,),
+                    Row(
+                      children: [
+                        Text('Growth This Year',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                          color: Color(0xff050505)
+                        ),
+                        ),
+                        
+                      ],
+                    ),
+                    SizedBox(height: 10,),
+                    Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                            color: Color(0xffEDF1F3),
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(
+                              width: 1,
+                              color: Color(0xffBFBFBF)
+                            )
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Text('Total Interest',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 17,
+                                color: Color(0xff050505)
+                              ),
+                              ),
+                              Text('\$ 2342',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                                    color: Color(0xff050505)
+                              ),
+                              )
+                            ],
+                          ),
                         )
                   ],
                 ),
