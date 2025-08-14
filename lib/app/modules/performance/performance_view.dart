@@ -31,12 +31,39 @@ class PerformanceView extends StatelessWidget {
             ),
           ),
           Expanded(child: Container(
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+            ),
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20,right: 20),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text('Account Value',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 24,
+                      color: Color(0xff050505)
+                    ),
+                    ),
+                    Container(
+                      height: 300,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        color: Color(0xffEDF1F3)
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
           ))
         ],
