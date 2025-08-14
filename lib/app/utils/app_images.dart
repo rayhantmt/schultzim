@@ -8,4 +8,5 @@ static const googlelogo='lib/assets/svgs/google_log.svg';
 static const profile='lib/assets/profile.png';
 static const otplogo ='lib/assets/otplogo.png';
 static const editprofile='lib/assets/svgs/edit_profile.svg';
+static const dpscful='lib/assets/svgs/dpscsful.svg';
 }
