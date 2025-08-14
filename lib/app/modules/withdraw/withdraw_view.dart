@@ -19,10 +19,13 @@ class WithdrawView extends StatelessWidget {
             height: Get.height * 0.20,
             child: Row(
               children: [
-                Icon(
-                  Icons.arrow_circle_left_outlined,
-                  size: 45,
-                  color: Colors.white,
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Icon(
+                    Icons.arrow_circle_left_outlined,
+                    size: 45,
+                    color: Colors.white,
+                  ),
                 ),
                 SizedBox(width: Get.width * 0.25),
                 Text(
