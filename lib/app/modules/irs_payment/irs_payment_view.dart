@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 import 'package:schultzim/app/modules/deposit/deposit_controller.dart';
+import 'package:schultzim/app/modules/irs_payment/irs_payment_controller.dart';
 import 'package:schultzim/app/routes/app_routes.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
@@ -11,7 +12,7 @@ class IrsPaymentView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.find<DepositController>();
+    final controller = Get.find<IrsPaymentController>();
     return Scaffold(
       backgroundColor: AppColors.primarycolor,
       body: Column(
@@ -134,7 +135,7 @@ class IrsPaymentView extends StatelessWidget {
 }
 
 Widget _onTimeDepositForm() {
-  final con = Get.find<DepositController>();
+  final con = Get.find<IrsPaymentController>();
   return Padding(
     padding: const EdgeInsets.only(left: 20, right: 20),
     child: Column(
@@ -203,7 +204,7 @@ Widget _onTimeDepositForm() {
 }
 
 Widget _recurringDepositForm() {
-  final c=Get.find<DepositController>();
+  final c=Get.find<IrsPaymentController>();
   return Padding(
     padding: const EdgeInsets.only(left: 20, right: 20),
     child: Column(

@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:schultzim/app/modules/deposit/deposit_controller.dart';
+
+import 'package:schultzim/app/modules/irs_payment/irs_payment_controller.dart';
 
 class IrsPaymentBinding extends Bindings{
   @override
   void dependencies() {
-    Get.lazyPut<DepositController>(() =>DepositController() );
+    Get.lazyPut<IrsPaymentController>(() =>IrsPaymentController() );
   }
 }
