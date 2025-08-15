@@ -114,11 +114,17 @@ class ProfileView extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Privacy Policy"),
+                              GestureDetector(
+                                onTap: () => Get.toNamed(AppRoutes.privacy),
+                                child: Text("Privacy Policy")),
                               SizedBox(height: 20),
-                              Text("Term of Use"),
+                              GestureDetector(
+                                onTap: () => Get.toNamed(AppRoutes.term),
+                                child: Text("Term of Use")),
                               SizedBox(height: 20),
-                              Text('FAQ'),
+                              GestureDetector(
+                                onTap: () => Get.toNamed(AppRoutes.faq),
+                                child: Text('FAQ')),
                               SizedBox(height: 10,),
                             ],
                           ),

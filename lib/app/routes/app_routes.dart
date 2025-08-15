@@ -18,4 +18,7 @@ static const depositsuccessful='/depositsuccessful';
 static const withdrawsuccessful='/withdrawsuccessful';
 static const changepasswordprofile='/changepasswordprofile';
 static const help='/help';
+static const faq='/faq';
+static const term='/term';
+static const privacy='/privacy';
 }

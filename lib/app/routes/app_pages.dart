@@ -8,6 +8,7 @@ import 'package:schultzim/app/modules/deposit/deposit_binding.dart';
 import 'package:schultzim/app/modules/deposit/deposit_view.dart';
 import 'package:schultzim/app/modules/deposit_successful/deposit_successful.dart';
 import 'package:schultzim/app/modules/edit_profile/edit_profile_view.dart';
+import 'package:schultzim/app/modules/faq/faq.dart';
 import 'package:schultzim/app/modules/forgot_password/forgot_password_view.dart';
 import 'package:schultzim/app/modules/hep/help_view.dart';
 import 'package:schultzim/app/modules/irs_payment/irs_payment_binding.dart';
@@ -21,10 +22,12 @@ import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_binding.dart';
 import 'package:schultzim/app/modules/otp_sign_up/otp_sign_up_view.dart';
 import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_binding.dart';
 import 'package:schultzim/app/modules/otp_verification_forgot_password/otp_view.dart';
+import 'package:schultzim/app/modules/privacy_policy/privacy_policy.dart';
 import 'package:schultzim/app/modules/sign_up/sign_up_binding.dart';
 import 'package:schultzim/app/modules/sign_up/sign_up_view.dart';
 import 'package:schultzim/app/modules/splash/splash_view.dart';
 import 'package:schultzim/app/modules/tax/tex_view.dart';
+import 'package:schultzim/app/modules/term_of_use/term_of_use.dart';
 import 'package:schultzim/app/modules/withdraw/withdraw_binding.dart';
 import 'package:schultzim/app/modules/withdraw/withdraw_view.dart';
 import 'package:schultzim/app/modules/withdraw_successful/withdraw_successful.dart';
@@ -50,6 +53,9 @@ class AppPages {
     GetPage(name: AppRoutes.depositsuccessful, page: () => DepositSuccessful(),),
     GetPage(name: AppRoutes.withdrawsuccessful, page: () => WithdrawSuccessful(),),
     GetPage(name: AppRoutes.changepasswordprofile, page: () => ChangePasswordProfileView(),binding: ChangePasswordProfileBinding()),
-    GetPage(name: AppRoutes.help, page:() =>  HelpView())
+    GetPage(name: AppRoutes.help, page:() =>  HelpView()),
+    GetPage(name: AppRoutes.faq, page: () => Faq(),),
+    GetPage(name: AppRoutes.term, page: () => TermOfUse(),),
+    GetPage(name: AppRoutes.privacy, page: () => PrivacyPolicy(),)
   ];
 }
