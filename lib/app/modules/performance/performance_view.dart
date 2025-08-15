@@ -148,6 +148,14 @@ class PerformanceView extends StatelessWidget {
                               )
                             ],
                           ),
+                        ),
+                        SizedBox(height: 20,),
+                        Text('Upcoming Transactions',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                          color: Color(0xff050505)
+                        ),
                         )
                   ],
                 ),
