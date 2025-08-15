@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/common_widgets/common_button.dart';
+import 'package:schultzim/app/common_widgets/log_in_text_field.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
@@ -84,7 +86,58 @@ class EditProfileView extends StatelessWidget {
                   color: Color(0xff050505)
                 ),
                 ),
-              )
+              ),
+              SizedBox(height: 10,),
+              Formfield(tittle: 'Rayhan Mia', obsecuretext: false, keyboardtype: TextInputType.text)
+     
+     ,
+     SizedBox(height: 20,),
+      Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text('Email',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505)
+                ),
+                ),
+              ),
+              SizedBox(height: 10,),
+              Formfield(tittle: 'Rayhantmt@gmail.com', obsecuretext: false, keyboardtype: TextInputType.text)
+     
+     ,
+     SizedBox(height: 20,), Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text('Adress',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505)
+                ),
+                ),
+              ),
+              SizedBox(height: 10,),
+              Formfield(tittle: 'Gulshan,Dhaka,Bangladesh', obsecuretext: false, keyboardtype: TextInputType.text)
+     
+     ,
+     SizedBox(height: 20,), Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text('Phone Number',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505)
+                ),
+                ),
+              ),
+              SizedBox(height: 10,),
+              Formfield(tittle: 'Enter your updated phone number', obsecuretext: false, keyboardtype: TextInputType.text)
+     
+     ,
+     SizedBox(height: 20,),
+     GestureDetector(
+      onTap: () => Get.back(),
+      child: CommonButton(tittle: 'Save Changes'))
                 ],
               ),
             )
