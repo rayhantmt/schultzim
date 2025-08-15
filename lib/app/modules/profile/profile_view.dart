@@ -73,9 +73,12 @@ class ProfileView extends StatelessWidget {
                       tiitle: 'Personal Information',
                       ic: Icon(Icons.person, color: AppColors.primarycolor),
                     ),
-                    ProfileContainer(
-                      tiitle: 'Password Change',
-                      ic: Icon(Icons.lock, color: AppColors.primarycolor),
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppRoutes.changepasswordprofile),
+                      child: ProfileContainer(
+                        tiitle: 'Password Change',
+                        ic: Icon(Icons.lock, color: AppColors.primarycolor),
+                      ),
                     ),
                     ProfileContainer(
                       tiitle: "Notification",
