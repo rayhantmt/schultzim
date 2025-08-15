@@ -17,10 +17,13 @@ class TexView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Icon(
-                  Icons.arrow_circle_left_outlined,
-                  size: 40,
-                  color: Colors.white,
+                GestureDetector(
+                  onTap: () => Get.back(),
+                  child: Icon(
+                    Icons.arrow_circle_left_outlined,
+                    size: 40,
+                    color: Colors.white,
+                  ),
                 ),
                 Text(
                   'Tax Information',
