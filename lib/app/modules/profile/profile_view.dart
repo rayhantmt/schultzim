@@ -80,11 +80,14 @@ class ProfileView extends StatelessWidget {
                         ic: Icon(Icons.lock, color: AppColors.primarycolor),
                       ),
                     ),
-                    ProfileContainer(
-                      tiitle: "Notification",
-                      ic: Icon(
-                        Icons.notifications,
-                        color: AppColors.primarycolor,
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppRoutes.notifications),
+                      child: ProfileContainer(
+                        tiitle: "Notification",
+                        ic: Icon(
+                          Icons.notifications,
+                          color: AppColors.primarycolor,
+                        ),
                       ),
                     ),
                     ProfileContainer(
@@ -115,67 +118,79 @@ class ProfileView extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(16),
                               ),
                               child: Container(
-                                height: Get.height*0.4,
+                                height: Get.height * 0.4,
                                 child: Padding(
-                                  padding: const EdgeInsets.only(left: 10,right: 10),
+                                  padding: const EdgeInsets.only(
+                                    left: 10,
+                                    right: 10,
+                                  ),
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       CircleAvatar(
-                                      radius: 30,  
+                                        radius: 30,
                                         backgroundColor: Color(0xffDC143C),
-                                        child: Icon(Icons.logout_outlined,
-                                        color: Colors.white
+                                        child: Icon(
+                                          Icons.logout_outlined,
+                                          color: Colors.white,
                                         ),
                                       ),
-                                      Text('Are you sure you want to log out of your account?'),
+                                      Text(
+                                        'Are you sure you want to log out of your account?',
+                                      ),
                                       GestureDetector(
-                                        onTap: () => Get.offAllNamed(AppRoutes.login),
+                                        onTap: () =>
+                                            Get.offAllNamed(AppRoutes.login),
                                         child: Container(
-                                          
                                           height: 50,
                                           width: double.infinity,
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(99),
+                                            borderRadius: BorderRadius.circular(
+                                              99,
+                                            ),
                                             color: Color(0xffDC143C),
                                           ),
                                           child: Center(
-                                            child: Text('Confirm Log Out',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 14,
-                                              color: Colors.white
-                                            ),
+                                            child: Text(
+                                              'Confirm Log Out',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 14,
+                                                color: Colors.white,
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ),
-                                  
+
                                       GestureDetector(
                                         onTap: () => Navigator.pop(context),
                                         child: Container(
-                                          
                                           height: 50,
                                           width: double.infinity,
                                           decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(99),
+                                            borderRadius: BorderRadius.circular(
+                                              99,
+                                            ),
                                             color: Color(0xffF3F4F6),
                                           ),
                                           child: Center(
-                                            child: Text('Cancel',
-                                            style: TextStyle(
-                                              fontWeight: FontWeight.w600,
-                                              fontSize: 14,
-                                              color: Color(0xff727272)
-                                            ),
+                                            child: Text(
+                                              'Cancel',
+                                              style: TextStyle(
+                                                fontWeight: FontWeight.w600,
+                                                fontSize: 14,
+                                                color: Color(0xff727272),
+                                              ),
                                             ),
                                           ),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ),
-                              )
+                              ),
                             );
                           },
                         );
