@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/common_widgets/common_button.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 class TexView extends StatelessWidget {
@@ -70,6 +71,79 @@ class TexView extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(height: 20,),
+                      Container(
+                        height: 220,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Color(0xffEDF1F3),
+                          borderRadius: BorderRadius.circular(8)
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text('Interst Earned',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17,
+                                  color: Color(0xff050505)
+                                ),
+                                ),
+                                Text('\$3546',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 20,
+                                  color: Color(0xff050505)
+                                ),
+                                )
+                              ],
+                            ),
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text('Fee Charged',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17,
+                                  color: Color(0xff050505)
+                                ),
+                                ),
+                                Text('\$46',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 20,
+                                  color: Color(0xff050505)
+                                ),
+                                )
+                              ],
+                            ),
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text('Amount Sent To IRS',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 17,
+                                  color: Color(0xff050505)
+                                ),
+                                ),
+                                Text('\$3566',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 20,
+                                  color: Color(0xff050505)
+                                ),
+                                )
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(height: 30,),
+                      CommonButton(tittle: 'Download Tax report FDF')
                     ],
                   ),
                 ),
