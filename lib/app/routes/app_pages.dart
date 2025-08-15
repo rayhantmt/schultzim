@@ -9,6 +9,7 @@ import 'package:schultzim/app/modules/deposit/deposit_view.dart';
 import 'package:schultzim/app/modules/deposit_successful/deposit_successful.dart';
 import 'package:schultzim/app/modules/edit_profile/edit_profile_view.dart';
 import 'package:schultzim/app/modules/forgot_password/forgot_password_view.dart';
+import 'package:schultzim/app/modules/hep/help_view.dart';
 import 'package:schultzim/app/modules/irs_payment/irs_payment_binding.dart';
 import 'package:schultzim/app/modules/irs_payment/irs_payment_view.dart';
 import 'package:schultzim/app/modules/log_in/log_in_binding.dart';
@@ -48,6 +49,7 @@ class AppPages {
     GetPage(name: AppRoutes.tax, page: () => TexView(),),
     GetPage(name: AppRoutes.depositsuccessful, page: () => DepositSuccessful(),),
     GetPage(name: AppRoutes.withdrawsuccessful, page: () => WithdrawSuccessful(),),
-    GetPage(name: AppRoutes.changepasswordprofile, page: () => ChangePasswordProfileView(),binding: ChangePasswordProfileBinding())
+    GetPage(name: AppRoutes.changepasswordprofile, page: () => ChangePasswordProfileView(),binding: ChangePasswordProfileBinding()),
+    GetPage(name: AppRoutes.help, page:() =>  HelpView())
   ];
 }

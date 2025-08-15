@@ -90,11 +90,14 @@ class ProfileView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ProfileContainer(
-                      tiitle: 'Help & Support',
-                      ic: Icon(
-                        Icons.info_outlined,
-                        color: AppColors.primarycolor,
+                    GestureDetector(
+                      onTap: () => Get.toNamed(AppRoutes.help),
+                      child: ProfileContainer(
+                        tiitle: 'Help & Support',
+                        ic: Icon(
+                          Icons.info_outlined,
+                          color: AppColors.primarycolor,
+                        ),
                       ),
                     ),
                     ProfileContainer(

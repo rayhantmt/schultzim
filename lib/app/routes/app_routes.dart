@@ -17,4 +17,5 @@ static const tax='/tax';
 static const depositsuccessful='/depositsuccessful';
 static const withdrawsuccessful='/withdrawsuccessful';
 static const changepasswordprofile='/changepasswordprofile';
+static const help='/help';
 }
