@@ -8,6 +8,8 @@ class HelpView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        centerTitle: true,
         title: Text('Help & Support',
         style: TextStyle(
           fontWeight: FontWeight.w700,
