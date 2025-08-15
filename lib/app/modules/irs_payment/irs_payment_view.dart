@@ -343,7 +343,7 @@ Widget _recurringDepositForm() {
               ),
             ),
             SizedBox(height: 10,),
-            Formfield(tittle: '23/7/2025', obsecuretext: false, keyboardtype: TextInputType.number,icon: Icon(Icons.calendar_month),),
+            Formfield(tittle: '7/23/2025', obsecuretext: false, keyboardtype: TextInputType.number,icon: Icon(Icons.calendar_month),),
             SizedBox(height: 20,),
             Container(
               height: 50,
