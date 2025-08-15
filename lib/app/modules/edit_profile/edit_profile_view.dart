@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
+import 'package:schultzim/app/utils/app_images.dart';
 
 class EditProfileView extends StatelessWidget {
   const EditProfileView({super.key});
@@ -38,7 +39,43 @@ class EditProfileView extends StatelessWidget {
                   topRight: Radius.circular(20),
                 ),
             ),
-            child: Text('Edit profile'),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 30,),
+                  Center(
+                child: Stack(
+                  children: [
+                    // Profile image
+                    CircleAvatar(
+                      radius: 50, // adjust size as needed
+                      backgroundImage: AssetImage(AppImages.profile),
+                    ),
+          
+                    // Camera icon overlay
+                    Positioned(
+                      bottom: 0,
+                      right: 0,
+                      child: Container(
+                        height: 30,
+                        width: 30,
+                        decoration: BoxDecoration(
+                          color: Colors.black87,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.camera_alt,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+                ],
+              ),
+            )
           ))
         ],
       ),
