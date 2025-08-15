@@ -41,6 +41,7 @@ class EditProfileView extends StatelessWidget {
             ),
             child: SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 30,),
                   Center(
@@ -73,6 +74,17 @@ class EditProfileView extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 20,),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text('Full Name',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 18,
+                  color: Color(0xff050505)
+                ),
+                ),
+              )
                 ],
               ),
             )
