@@ -100,13 +100,32 @@ class ProfileView extends StatelessWidget {
                         ),
                       ),
                     ),
-                    ProfileContainer(
-                      tiitle: 'Legal & Compliance',
-                      ic: Icon(
-                        Icons.insert_drive_file_rounded,
+                    ExpansionTile(
+                      title: Text("Legal & Compliance"),
+
+                      leading: Icon(
+                        Icons.insert_drive_file_outlined,
                         color: AppColors.primarycolor,
                       ),
+                      trailing: Icon(Icons.arrow_drop_down),
+                      children: [
+                        Container(
+                          color: Colors.white,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("Privacy Policy"),
+                              SizedBox(height: 20),
+                              Text("Term of Use"),
+                              SizedBox(height: 20),
+                              Text('FAQ'),
+                              SizedBox(height: 10,),
+                            ],
+                          ),
+                        ),
+                      ],
                     ),
+
                     ProfileContainer(
                       tiitle: 'Payment Mathoad',
                       ic: Icon(Icons.payment, color: AppColors.primarycolor),
