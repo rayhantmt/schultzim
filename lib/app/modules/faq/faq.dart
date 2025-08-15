@@ -34,12 +34,27 @@ class Faq extends StatelessWidget {
             ),
           ),
           Expanded(child: Container(
+            width: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 30,),
+                  Text('Frequently Asked Questions',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 20,
+                    color: Colors.black
+                  ),
+                  )
+                ],
+              ),
             ),
           ))
         ],
