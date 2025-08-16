@@ -9,6 +9,7 @@ static const profile='lib/assets/profile.png';
 static const otplogo ='lib/assets/otplogo.png';
 static const editprofile='lib/assets/svgs/edit_profile.svg';
 static const dpscful='lib/assets/svgs/dpscsful.svg';
-static const irs='lib/assets/svgs/irs.svg';
-static const deposit='lib/assets/svgs/deposit.svg';
+static const irs='lib/assets/irs.png';
+static const deposit='lib/assets/deposit.png';
+
 }

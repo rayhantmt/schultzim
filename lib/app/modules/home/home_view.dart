@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/home_container.dart';
 import 'package:schultzim/app/modules/home/home_controller.dart';
@@ -224,6 +225,7 @@ class HomeView extends StatelessWidget {
                           ),
                         ],
                       ),
+                      
                       SizedBox(height: 10),
                       ListView.builder(
                         itemCount: controller.transactions.length,
@@ -243,7 +245,34 @@ class HomeView extends StatelessWidget {
                                   color: Color(0xffE6E6E6),
                                 ),
                               ),
-                              child: Text(data.amount),
+                              child: Row(
+                                children: [
+                                  Image.asset(data.imageUrl,
+                                  height: 33,
+                                  width: 33,
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(data.title,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16,
+                                        color: Color(0xff050505)
+                                      ),
+                                      ),
+                                      Text(data.date,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        color: Color(0xff737373)
+                                      ),
+                                      )
+                                    ],
+                                  ),
+                                  Spacer(),
+                                  Text(data.amount),
+                                ],
+                              ),
                             ),
                           );
                         },
