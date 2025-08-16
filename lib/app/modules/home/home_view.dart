@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/common_widgets/home_container.dart';
 import 'package:schultzim/app/modules/home/home_controller.dart';

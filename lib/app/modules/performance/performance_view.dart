@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:schultzim/app/modules/performance/performance_controller.dart';
 import 'package:schultzim/app/utils/app_colors.dart';
 
 class PerformanceView extends StatelessWidget {
@@ -7,6 +8,7 @@ class PerformanceView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller=Get.find<PerformanceController>();
     return Scaffold(
       backgroundColor: AppColors.primarycolor,
       body: Column(
@@ -156,7 +158,57 @@ class PerformanceView extends StatelessWidget {
                           fontSize: 20,
                           color: Color(0xff050505)
                         ),
-                        )
+                        ),
+                        ListView.builder(
+                        itemCount: controller.transactions.length,
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          final data = controller.transactions[index];
+                          return Padding(
+                            padding: const EdgeInsets.only(top: 10,bottom: 10),
+                            child: Container(
+                              height: 70,
+                              width: double.infinity,
+                             
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1,
+                                  color: Color(0xffE6E6E6),
+                                ),
+                              ),
+                              child: Row(
+                                children: [
+                                  Image.asset(data.imageUrl,
+                                  height: 33,
+                                  width: 33,
+                                  ),
+                                  Column(
+                                    children: [
+                                      Text(data.title,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16,
+                                        color: Color(0xff050505)
+                                      ),
+                                      ),
+                                      Text(data.date,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        color: Color(0xff737373)
+                                      ),
+                                      )
+                                    ],
+                                  ),
+                                  Spacer(),
+                                  Text(data.amount),
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      ),
                   ],
                 ),
               ),
