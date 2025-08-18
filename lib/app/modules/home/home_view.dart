@@ -93,7 +93,7 @@ class HomeView extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  '\$ 56786',
+                                  '\$ 56,786',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 29,
@@ -120,7 +120,7 @@ class HomeView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Earned this year',
+                                  'Interest Earned this year',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 16,
