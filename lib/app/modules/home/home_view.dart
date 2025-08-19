@@ -118,13 +118,17 @@ class HomeView extends StatelessWidget {
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
+                            
                               children: [
-                                Text(
-                                  'Interest Earned this year',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 16,
-                                    color: Color(0xff737373),
+                                Center(
+                                  child: Text(
+                                    textAlign: TextAlign.center,
+                                    'Interest Earned this year',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 16,
+                                      color: Color(0xff737373),
+                                    ),
                                   ),
                                 ),
                                 Text(
@@ -150,7 +154,8 @@ class HomeView extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Expected IRS',
+                                  textAlign: TextAlign.center,
+                                  'Expected EOY Balance',
                                   style: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 16,
