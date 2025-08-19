@@ -176,6 +176,8 @@ class HomeView extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 20),
+                      Text('No more deposit and interest rate today'),
+                      SizedBox(height: 20,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
