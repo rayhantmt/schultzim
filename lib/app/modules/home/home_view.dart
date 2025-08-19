@@ -211,7 +211,7 @@ class HomeView extends StatelessWidget {
                           GestureDetector(
                             onTap: () => Get.toNamed(AppRoutes.tax),
                             child: HomeContainer(
-                              tittle: 'Tax ',
+                              tittle: 'Tax Information',
                               ic: Icons.insert_drive_file_outlined,
                             ),
                           ),
@@ -232,7 +232,7 @@ class HomeView extends StatelessWidget {
                         ],
                       ),
                       
-                      SizedBox(height: 10),
+                 
                       ListView.builder(
                         itemCount: controller.transactions.length,
                         shrinkWrap: true,
