@@ -204,14 +204,14 @@ class HomeView extends StatelessWidget {
                           GestureDetector(
                             onTap: () => Get.toNamed(AppRoutes.irspayment),
                             child: HomeContainer(
-                              tittle: 'IRS Payment',
+                              tittle: 'Make IRS Payment',
                               ic: Icons.pie_chart_outline_sharp,
                             ),
                           ),
                           GestureDetector(
                             onTap: () => Get.toNamed(AppRoutes.tax),
                             child: HomeContainer(
-                              tittle: 'Tax',
+                              tittle: 'Tax ',
                               ic: Icons.insert_drive_file_outlined,
                             ),
                           ),
