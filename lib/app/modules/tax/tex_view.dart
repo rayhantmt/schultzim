@@ -85,29 +85,29 @@ class TexView extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                              Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text('Principle Sent',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 17,
-                                  color: Color(0xff050505)
-                                ),
-                                ),
-                                Text('\$32',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 20,
-                                  color: Color(0xff050505)
-                                ),
-                                )
-                              ],
-                            ),
+                            //   Row(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            //   children: [
+                            //     Text('Principle Sent',
+                            //     style: TextStyle(
+                            //       fontWeight: FontWeight.w400,
+                            //       fontSize: 17,
+                            //       color: Color(0xff050505)
+                            //     ),
+                            //     ),
+                            //     Text('\$32',
+                            //     style: TextStyle(
+                            //       fontWeight: FontWeight.w500,
+                            //       fontSize: 20,
+                            //       color: Color(0xff050505)
+                            //     ),
+                            //     )
+                            //   ],
+                            // ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                Text('Interst Earned',
+                                Text('Annual Interst Earned',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 17,
