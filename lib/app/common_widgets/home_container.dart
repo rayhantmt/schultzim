@@ -19,9 +19,12 @@ final IconData ic;
         children: [
         Icon(ic),
         Text(tittle,
+         overflow: TextOverflow.ellipsis,
+         maxLines: 1,
         style: TextStyle(
+          
           fontWeight: FontWeight.w500,
-          fontSize: 16,
+          fontSize: 12,
           color: Colors.black
 
         ),
