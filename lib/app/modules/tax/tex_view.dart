@@ -126,7 +126,7 @@ class TexView extends StatelessWidget {
                              Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                Text('Fee Charged',
+                                Text('Fees Charged',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 17,
