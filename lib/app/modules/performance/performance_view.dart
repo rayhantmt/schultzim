@@ -1,3 +1,4 @@
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:schultzim/app/modules/performance/performance_controller.dart';
@@ -62,6 +63,46 @@ class PerformanceView extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                         color: Color(0xffEDF1F3)
                       ),
+                      child: BarChart(
+  BarChartData(
+    alignment: BarChartAlignment.spaceAround,
+    maxY: controller.monthlyDataList
+            .map((e) => e.value)
+            .reduce((a, b) => a > b ? a : b) +
+        10,
+    barGroups: controller.monthlyDataList.map((data) {
+      return BarChartGroupData(
+        x: controller.monthlyDataList.indexOf(data),
+        barRods: [
+          BarChartRodData(
+            toY: data.value,
+            color: Colors.blueAccent,
+            width: 18,
+            borderRadius: BorderRadius.circular(6),
+          ),
+        ],
+      );
+    }).toList(),
+    titlesData: FlTitlesData(
+      leftTitles: AxisTitles(
+        sideTitles: SideTitles(showTitles: true),
+      ),
+      bottomTitles: AxisTitles(
+        sideTitles: SideTitles(
+          showTitles: true,
+          getTitlesWidget: (double value, TitleMeta meta) {
+            int index = value.toInt();
+            if (index < controller.monthlyDataList.length) {
+              return Text(controller.monthlyDataList[index].month);
+            }
+            return const Text("");
+          },
+        ),
+      ),
+    ),
+  ),
+)
+,
                     ),
                     SizedBox(height: 20,),
                     Row(

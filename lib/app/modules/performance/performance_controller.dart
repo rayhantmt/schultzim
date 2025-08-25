@@ -1,10 +1,10 @@
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
-import 'package:schultzim/app/modules/home/home_model.dart';
+import 'package:get/get.dart';
+import 'package:schultzim/app/modules/performance/performance_model.dart';
 import 'package:schultzim/app/utils/app_images.dart';
 
 class PerformanceController extends GetxController {
-  // This is where you store your list data
-  final List<Transaction> transactions = [
+  /// List of transactions (static for now, but later you can fetch from API)
+  final transactions = <Transaction>[
     Transaction(
       title: 'Deposit',
       date: 'Due on April 15, 2025',
@@ -23,5 +23,25 @@ class PerformanceController extends GetxController {
       amount: '\$200',
       imageUrl: AppImages.deposit,
     ),
-  ];
+  ].obs; // 🔹 Made it observable in case you want live updates later
+
+  /// Monthly chart data
+  var monthlyDataList = <MonthlyData>[].obs;
+
+  @override
+  void onInit() {
+    super.onInit();
+    loadDummyData();
+  }
+
+  void loadDummyData() {
+    monthlyDataList.assignAll([
+      MonthlyData(month: "Jan", value: 30),
+      MonthlyData(month: "Feb", value: 50),
+      MonthlyData(month: "Mar", value: 20),
+      MonthlyData(month: "Apr", value: 80),
+      MonthlyData(month: "May", value: 60),
+      MonthlyData(month: "Jun", value: 40),
+    ]);
+  }
 }

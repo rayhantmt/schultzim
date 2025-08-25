@@ -37,6 +37,7 @@ dependencies:
   flutter_svg: ^2.2.0
   get: ^4.7.2
   country_code_picker: ^3.3.0
+  fl_chart: ^1.0.0
 
 dev_dependencies:
   flutter_test:
