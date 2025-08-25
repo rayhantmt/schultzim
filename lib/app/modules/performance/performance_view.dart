@@ -76,7 +76,7 @@ class PerformanceView extends StatelessWidget {
         barRods: [
           BarChartRodData(
             toY: data.value,
-            color: Colors.blueAccent,
+            color: AppColors.primarycolor,
             width: 18,
             borderRadius: BorderRadius.circular(6),
           ),
