@@ -64,7 +64,11 @@ class Faq extends StatelessWidget {
                     ),
                     ),
                     SizedBox(height: 10,),
-                    
+                    Text('Morbi adipiscing gravida dolor dui tincidunt libero. Duis malesuada massa libero nec accumsan nunc gravida.',
+                    style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,
+                    color: Color(0xff8D8D8D)
+                    ),
+                    )
                   ],
                 ),
               ),
