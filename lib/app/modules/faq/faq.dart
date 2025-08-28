@@ -68,7 +68,9 @@ class Faq extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.w400,fontSize: 14,
                     color: Color(0xff8D8D8D)
                     ),
-                    )
+                    ),
+                    SizedBox(height: 20,),
+                    
                   ],
                 ),
               ),
