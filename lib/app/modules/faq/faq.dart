@@ -43,25 +43,30 @@ class Faq extends StatelessWidget {
                 ),
             ),
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  SizedBox(height: 30,),
-                  Text('Frequently Asked Questions',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: Colors.black
-                  ),
-                  ),
-                  SizedBox(height: 20,),
-                  Text('What is the most popular online shopping store?',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 14,
-                    color: Color(0xff0F0F0F)
-                  ),
-                  )
-                ],
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20,right: 20),
+                child: Column(
+                  children: [
+                    SizedBox(height: 30,),
+                    Text('Frequently Asked Questions',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      color: Colors.black
+                    ),
+                    ),
+                    SizedBox(height: 20,),
+                    Text('What is the most popular online shopping store?',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 19,
+                      color: Color(0xff0F0F0F)
+                    ),
+                    ),
+                    SizedBox(height: 10,),
+                    
+                  ],
+                ),
               ),
             ),
           ))
