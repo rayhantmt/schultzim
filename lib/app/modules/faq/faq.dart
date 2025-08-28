@@ -70,7 +70,13 @@ class Faq extends StatelessWidget {
                     ),
                     ),
                     SizedBox(height: 20,),
-                    
+                    Text('What is the most popular online shopping store?',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 19,
+                      color: Color(0xff0F0F0F)
+                    ),
+                    ),
                   ],
                 ),
               ),
